@@ -1,7 +1,6 @@
 import Commands.Command;
 import com.company.Database;
 import com.company.InputReader;
-import com.company.Runtime;
 import xmlParser.Parser;
 
 import java.io.IOException;
