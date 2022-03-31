@@ -12,6 +12,11 @@ public class Database {
         collection = new TreeSet<Person>();
         historyLog = new ArrayList<String>();
     }
+
+    public TreeSet<Person> getCollection() {
+        return collection;
+    }
+//todo move collection stuff to commands classes from here
     public void addNewElement(Person person){
         collection.add(person);
     }
@@ -33,7 +38,15 @@ public class Database {
         }
         return stringBuilder.toString();
     }
-    private Long generateID(){
+
+    public int sumOfHeight(){
+        int height = 0;
+        for (Person person: collection){
+            height+=person.getHeight();
+        }
+        return height;
+    }
+    public Long generateID(){
         return (Long) (long) (collection.size() + 1);//todo norm ID
     }
     public Person generateNewElement(){

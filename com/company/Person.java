@@ -24,6 +24,10 @@ public class Person implements Comparable<Person>{
         this.location = new Location(locX, locY, locZ);
     }
 
+    public int getHeight() {
+        return height;
+    }
+
     @Override
     public int compareTo(Person person) {
         if (id > person.id)
