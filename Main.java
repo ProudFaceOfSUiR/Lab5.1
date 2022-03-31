@@ -12,7 +12,7 @@ public class Main {
         InputReader inputReader = new InputReader();
         Database Database = new Database();
         Database.initialize();
-        Parser.parse(Database,args[0]);
+        Parser.parseFromXML(Database,args[0]);
         while(true) {
             Command command = inputReader.read(scanner);
             command.execute(Database);

@@ -11,8 +11,8 @@ public class Save extends Command{
     }
     @Override
     public void execute(Database database) throws IOException {
-        //Parser.parse(database,"/Users/anatoly_novikov/IdeaProjects/Oh,_shit_here_we_go_again/src/test.xml");
-
+        String db = Parser.parseToXML(database);
+        Parser.dataBasetoXML(db,"/Users/anatoly_novikov/IdeaProjects/Oh,_shit_here_we_go_again/src/test2.xml");
 
     }
 }

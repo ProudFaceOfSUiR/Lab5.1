@@ -1,15 +1,15 @@
 package xmlParser;
 
-import Commands.Save;
 import Exceptions.NotSatisyingParametrException;
 import com.company.Database;
 import com.company.Person;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class Parser {
-    public static void parse(Database database, String file_path){
+    public static void parseFromXML(Database database, String file_path){
         BufferedInputStream bis = null;
         FileInputStream  fis= null;
 
@@ -113,4 +113,63 @@ public class Parser {
             }
         }
     }
+
+    public static String parseToXML(Database database){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>").append("\n");
+        sb.append("<Collection>").append("\n");
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        int n = database.getCollection().size();
+        for (Person p :database.getCollection()) {
+            sb.append("\t").append("<Person>").append("\n");
+
+            sb.append("\t\t").append("<Name>").append(p.getName()).append("</Name>").append("\n");
+            sb.append("\t\t").append("<Coordinates>").append("\n");
+            sb.append("\t\t\t").append("<x>").append(p.getCoordinates().getX()).append("</x>").append("\n");
+            sb.append("\t\t\t").append("<y>").append(p.getCoordinates().getY()).append("</y>").append("\n");
+            sb.append("\t\t").append("</Coordinates>").append("\n");
+            sb.append("\t\t").append("<creationDate>").append("").append("</creationDate>").append("\n");
+            sb.append("\t\t").append("<Height>").append(p.getHeight()).append("</Height>").append("\n");
+            sb.append("\t\t").append("<eyeColor>").append(p.getEyeColor().toString()).append("</eyeColor>").append("\n");
+            sb.append("\t\t").append("<hairColor>").append(p.getHairColor().toString()).append("</hairColor>").append("\n");
+            sb.append("\t\t").append("<nationality>").append(p.getNationality().toString()).append("</nationality>").append("\n");
+            sb.append("\t\t").append("<Location>").append("\n");
+            sb.append("\t\t\t").append("<x>").append(p.getLocation().getX()).append("</x>").append("\n");
+            sb.append("\t\t\t").append("<y>").append(p.getLocation().getY()).append("</y>").append("\n");
+            sb.append("\t\t\t").append("<z>").append(p.getLocation().getZ()).append("</z>").append("\n");
+            sb.append("\t\t").append("</Location>").append("\n");
+            sb.append("\t").append("</Person>").append("\n");
+        }
+
+        sb.append("</Collection>");
+        return sb.toString();
+    }
+    /**
+     * parses to xml
+     * @param database
+     * @param path
+     */
+    public static void dataBasetoXML(String database,String path){
+        try {
+            // Creates a FileWriter
+            FileWriter file = new FileWriter(path);
+
+            // Creates a BufferedWriter
+            BufferedWriter buffer = new BufferedWriter(file);
+
+            //writing and flushing to file
+            //System.out.println(database);
+            buffer.write(database);
+            //System.out.println(dir+"/"+path);
+            buffer.flush();
+
+            System.out.println("Database was successfully saved to a new file!");
+            buffer.close();
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+
 }

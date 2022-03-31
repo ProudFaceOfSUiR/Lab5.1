@@ -42,6 +42,30 @@ public class Person implements Comparable<Person>{
         return info;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Coordinates getCoordinates() {
+        return coordinates;
+    }
+
+    public Color getEyeColor() {
+        return eyeColor;
+    }
+
+    public Country getNationality() {
+        return nationality;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public Color getHairColor() {
+        return hairColor;
+    }
+
     public static class Coordinates {
         private Integer x; //Значение поля должно быть больше -616, Поле не может быть null
         private float y;
@@ -90,6 +114,18 @@ public class Person implements Comparable<Person>{
 
         public void setZ(Float z) {
             this.z = z;
+        }
+
+        public Long getX() {
+            return x;
+        }
+
+        public float getY() {
+            return y;
+        }
+
+        public Float getZ() {
+            return z;
         }
 
         @Override
