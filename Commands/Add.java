@@ -2,7 +2,6 @@ package Commands;
 
 import com.company.Database;
 import com.company.Person;
-import sun.dc.path.PathError;
 
 public class Add extends Command{
     public Add(String argument) {
@@ -10,7 +9,7 @@ public class Add extends Command{
     }
     @Override
     public void execute(Database database){
-        Person person = database.generateNewElement();
+        Person person = database.generateNewElement(-1L);
         database.addNewElement(person);
         System.out.println("New person added");
     }

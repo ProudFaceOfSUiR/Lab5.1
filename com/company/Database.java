@@ -3,14 +3,13 @@ package com.company;
 import Commands.Command;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.TreeSet;
 public class Database {
     private TreeSet<Person> collection;
     private ArrayList<String> historyLog;
     public void initialize(){
-        collection = new TreeSet<Person>();
-        historyLog = new ArrayList<String>();
+        collection = new TreeSet<>();
+        historyLog = new ArrayList<>();
     }
 
     public TreeSet<Person> getCollection() {
@@ -49,7 +48,7 @@ public class Database {
     public Long generateID(){
         return (Long) (long) (collection.size() + 1);//todo norm ID
     }
-    public Person generateNewElement(){
+    public Person generateNewElement(Long id){
         System.out.print("Enter name: ");
         String name = FieldFiller.fillString(true);
         System.out.print("Enter coordinates\nX coordinate: ");
@@ -70,7 +69,8 @@ public class Database {
         float Yloc = FieldFiller.fillYCoord();
         System.out.print("Z coordinate: ");
         Float Zloc = FieldFiller.fillZLoc();
-        return new Person(generateID(),name, XCoord, YCoord, null, height, eyeColor, hairColor,country, XLoc, Yloc, Zloc);
+        if(id==-1L) id = generateID();
+        return new Person(id,name, XCoord, YCoord, null, height, eyeColor, hairColor,country, XLoc, Yloc, Zloc);
     }
     @Override
     public String toString(){

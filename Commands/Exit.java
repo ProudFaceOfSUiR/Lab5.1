@@ -2,8 +2,6 @@ package Commands;
 
 import com.company.Database;
 
-import java.util.TreeSet;
-
 public class Exit extends Command{
     public Exit(String argument) {
         super(argument);

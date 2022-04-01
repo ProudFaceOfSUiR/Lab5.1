@@ -58,13 +58,10 @@ public class Parser {
                     newLine = r.readLine();
                     if(!newLine.contains("<nationality>")||!newLine.contains("</nationality>")) throw new NullPointerException();
                     Person.Country nationality = Person.Country.valueOf(newLine.trim().replace("<nationality>","").replace("</nationality>","").toUpperCase(Locale.ROOT));
-
                     if(!r.readLine().trim().equals("<Location>")) throw new NullPointerException();
                     newLine = r.readLine();
-
                     if(!newLine.contains("<x>")||!newLine.contains("</x>")) throw new NullPointerException();
                     Long locX = Long.parseLong(newLine.trim().replace("<x>","").replace("</x>",""));
-
                     newLine = r.readLine();
                     if(!newLine.contains("<y>")||!newLine.contains("</y>")) throw new NullPointerException();
                     newLine = newLine.trim().replace("<y>","").replace("</y>","");

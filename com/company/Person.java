@@ -24,6 +24,10 @@ public class Person implements Comparable<Person>{
         this.location = new Location(locX, locY, locZ);
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public int getHeight() {
         return height;
     }
@@ -32,7 +36,9 @@ public class Person implements Comparable<Person>{
     public int compareTo(Person person) {
         if (id > person.id)
             return 1;
-        else return -1;
+        if(id < person.id)
+            return -1;
+        else return 0;
     }
     @Override
     public String toString(){
@@ -93,7 +99,7 @@ public class Person implements Comparable<Person>{
                     ", y=" + y;
         }
     }
-    public static class Location {
+    public static class Location implements Comparable<Float>{
         private Long x; //Поле не может быть null
         private float y;
         private Float z; //Поле не может быть null
@@ -133,6 +139,15 @@ public class Person implements Comparable<Person>{
             return "x=" + x +
                     ", y=" + y +
                     ", z=" + z;
+        }
+
+        @Override
+        public int compareTo(Float location) {
+            if((x+y+z)<location)
+                return 1;
+            if((x+y+z)>location)
+                return -1;
+            else return 0;
         }
     }
     public enum Color {

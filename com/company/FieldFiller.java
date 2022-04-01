@@ -22,7 +22,7 @@ public class FieldFiller {
         try {
              X = Integer.valueOf(scanner.nextLine());
              if (X>-616) valid = true;
-        }catch (NumberFormatException exception){
+        }catch (NumberFormatException ignored){
         }
         finally {
             if(!valid) {
@@ -67,7 +67,7 @@ public class FieldFiller {
             height = Integer.parseInt(scanner.nextLine());
 
             if (height>0) valid = true;
-        }catch (NumberFormatException exception){
+        }catch (NumberFormatException ignored){
         }
         finally {
             if(!valid) {

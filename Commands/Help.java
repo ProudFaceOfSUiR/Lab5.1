@@ -2,9 +2,6 @@ package Commands;
 
 import com.company.Database;
 
-import java.sql.DatabaseMetaData;
-import java.util.TreeSet;
-
 public class Help extends Command{
     public Help(String argument) {
         super(argument);

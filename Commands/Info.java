@@ -1,6 +1,5 @@
 package Commands;
 
-import com.company.Database;
 
 public class Info extends Command{
 
