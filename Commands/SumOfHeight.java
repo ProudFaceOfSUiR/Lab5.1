@@ -1,7 +1,6 @@
 package Commands;
 
 import com.company.Database;
-import com.company.Person;
 
 public class SumOfHeight extends Command{
     public SumOfHeight(String argument) {

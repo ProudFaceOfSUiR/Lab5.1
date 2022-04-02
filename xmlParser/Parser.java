@@ -5,7 +5,8 @@ import com.company.Database;
 import com.company.Person;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.time.format.DateTimeFormatter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 public class Parser {
@@ -44,7 +45,8 @@ public class Parser {
                     if(!r.readLine().trim().equals("</Coordinates>")) throw new NullPointerException();
                     newLine = r.readLine();
                     if(!newLine.contains("<creationDate>")||!newLine.contains("</creationDate>")) throw new NullPointerException();
-                    String creationDate = newLine.trim().replace("<creationDate>","").replace("</creationDate>","");
+                    SimpleDateFormat formatter =new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
+                    java.util.Date creationDate = formatter.parse(newLine.trim().replace("<creationDate>","").replace("</creationDate>",""));
                     newLine = r.readLine();
                     if(!newLine.contains("<Height>")||!newLine.contains("</Height>")) throw new NullPointerException();
                     Integer height = Integer.parseInt(newLine.trim().replace("<Height>","").replace("</Height>",""));
@@ -71,7 +73,7 @@ public class Parser {
                     newLine = r.readLine();
                     if(!newLine.contains("<z>")||!newLine.contains("</z>")) throw new NullPointerException();
                     Float locZ = Float.valueOf(newLine.trim().replace("<z>","").replace("</z>",""));
-                    database.addNewElement(new Person(database.generateID() ,name,coordX,coordY,null,height,eyeColor,hairColor,nationality,locX, locY,locZ));
+                    database.addNewElement(new Person(database.generateID() ,name,coordX,coordY,creationDate,height,eyeColor,hairColor,nationality,locX, locY,locZ));
                     if(!r.readLine().trim().equals("</Location>")) throw new NullPointerException();
                     if(!r.readLine().trim().equals("</Person>")) throw new NullPointerException();
                 }
@@ -96,6 +98,8 @@ public class Parser {
             System.out.println("Unable to read file");
         } catch (NotSatisyingParametrException e) {
             e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
         } finally
         {
             try{
@@ -116,18 +120,14 @@ public class Parser {
 
         sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>").append("\n");
         sb.append("<Collection>").append("\n");
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        int n = database.getCollection().size();
         for (Person p :database.getCollection()) {
             sb.append("\t").append("<Person>").append("\n");
-
             sb.append("\t\t").append("<Name>").append(p.getName()).append("</Name>").append("\n");
             sb.append("\t\t").append("<Coordinates>").append("\n");
             sb.append("\t\t\t").append("<x>").append(p.getCoordinates().getX()).append("</x>").append("\n");
             sb.append("\t\t\t").append("<y>").append(p.getCoordinates().getY()).append("</y>").append("\n");
             sb.append("\t\t").append("</Coordinates>").append("\n");
-            sb.append("\t\t").append("<creationDate>").append("").append("</creationDate>").append("\n");
+            sb.append("\t\t").append("<creationDate>").append(p.getCreationDate().toString()).append("</creationDate>").append("\n");
             sb.append("\t\t").append("<Height>").append(p.getHeight()).append("</Height>").append("\n");
             sb.append("\t\t").append("<eyeColor>").append(p.getEyeColor().toString()).append("</eyeColor>").append("\n");
             sb.append("\t\t").append("<hairColor>").append(p.getHairColor().toString()).append("</hairColor>").append("\n");
@@ -164,8 +164,8 @@ public class Parser {
 
             System.out.println("Database was successfully saved to a new file!");
             buffer.close();
-        } catch (Exception e){
-            System.out.println(e.getMessage());
+        } catch (NullPointerException | IOException e){
+            System.out.println("No file");
         }
     }
 

@@ -3,10 +3,12 @@ package com.company;
 import Commands.Command;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.TreeSet;
 public class Database {
     private TreeSet<Person> collection;
     private ArrayList<String> historyLog;
+    public String pathName;
     public void initialize(){
         collection = new TreeSet<>();
         historyLog = new ArrayList<>();
@@ -69,8 +71,10 @@ public class Database {
         float Yloc = FieldFiller.fillYCoord();
         System.out.print("Z coordinate: ");
         Float Zloc = FieldFiller.fillZLoc();
+        Date date = new Date();
+        //System.out.println(date.toString());
         if(id==-1L) id = generateID();
-        return new Person(id,name, XCoord, YCoord, null, height, eyeColor, hairColor,country, XLoc, Yloc, Zloc);
+        return new Person(id,name, XCoord, YCoord, date, height, eyeColor, hairColor,country, XLoc, Yloc, Zloc);
     }
     @Override
     public String toString(){
