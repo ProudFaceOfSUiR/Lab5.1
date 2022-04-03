@@ -12,11 +12,14 @@ public class Main {
         InputReader inputReader = new InputReader();
         Database Database = new Database();
         Database.initialize();
-        Parser.parseFromXML(Database,args[0]);
+        if(args.length>0) Parser.parseFromXML(Database,args[0]);
+        else System.out.println("No file");
         while(true) {
-            Command command = inputReader.read(scanner);
-            command.execute(Database);
-            Database.updateHistoryLog(command);
+            try {
+                Command command = inputReader.read(scanner);
+                command.execute(Database);
+                Database.updateHistoryLog(command);
+            }catch (Exception ignored){}
         }
     }
 }

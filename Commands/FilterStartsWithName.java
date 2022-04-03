@@ -12,7 +12,10 @@ public class FilterStartsWithName extends Command{
         try {
             boolean contains = false;
             for (Person p : database.getCollection()) {
-                if (p.getName().startsWith(argument)) {
+                if (p.getName().startsWith(argument)&&!argument.equals("")) {
+                    System.out.println(argument);
+                    System.out.println(p.getName());
+                    System.out.println();
                     System.out.println(p);
                     contains = true;
                 }

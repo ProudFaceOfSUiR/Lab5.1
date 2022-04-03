@@ -50,6 +50,7 @@ public class Database {
     public Long generateID(){
         return (Long) (long) (collection.size() + 1);//todo norm ID
     }
+
     public Person generateNewElement(Long id){
         System.out.print("Enter name: ");
         String name = FieldFiller.fillString(true);

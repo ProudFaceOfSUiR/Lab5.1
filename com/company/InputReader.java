@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Locale;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import Commands.*;
@@ -21,7 +22,7 @@ public class InputReader {
     public Command read(Scanner scanner) {
         Command cmd;
         try {
-            String input = scanner.nextLine();
+            String input = scanner.nextLine().toLowerCase(Locale.ROOT);
             String[] input_arr = input.split(" ");
             String command = input_arr[0];
 
