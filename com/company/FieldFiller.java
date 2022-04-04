@@ -4,6 +4,11 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class FieldFiller {
+    /**
+     *
+     * @param isNescessary depends if th field can be null
+     * @return string from console
+     */
     public static String fillString(boolean isNescessary){
         Scanner scanner = new Scanner(System.in);
         String string = scanner.nextLine();
@@ -15,6 +20,11 @@ public class FieldFiller {
         }
         return string;
     }
+
+    /**
+     *
+     * @return new X coordinate
+     */
     public static Integer fillXCoord(){
         Scanner scanner = new Scanner(System.in);
         Integer X = null;
@@ -32,6 +42,11 @@ public class FieldFiller {
         }
         return X;
     }
+
+    /**
+     *
+     * @return new Y coordinate
+     */
     public static float fillYCoord(){
         Scanner scanner = new Scanner(System.in);
         float Y;
@@ -46,6 +61,11 @@ public class FieldFiller {
         }
         return Y;
     }
+
+    /**
+     *
+     * @return new color
+     */
     public static Person.Color fillColor(){
         Scanner scanner = new Scanner(System.in);
         Person.Color colorEnum = null;
@@ -59,6 +79,11 @@ public class FieldFiller {
         }
         return colorEnum;
     }
+
+    /**
+     *
+     * @return new height
+     */
     public static int fillHeight(){
         Scanner scanner = new Scanner(System.in);
         int height = 0;
@@ -90,6 +115,11 @@ public class FieldFiller {
         }
         return countryEnum;
     }
+
+    /**
+     *
+     * @return new location X
+     */
     public static Long fillXLoc(){
         Scanner scanner = new Scanner(System.in);
         Long X;
@@ -101,6 +131,11 @@ public class FieldFiller {
         }
         return X;
     }
+
+    /**
+     *
+     * @return new location Z
+     */
     public static Float fillZLoc(){
         Scanner scanner = new Scanner(System.in);
         Float Z;

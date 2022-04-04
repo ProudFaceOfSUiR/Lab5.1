@@ -6,8 +6,15 @@ import java.util.Scanner;
 import Commands.*;
 import Commands.Error;
 
+/**
+ * That class provides read from console using Scanner and removes the command to be executed
+ */
 public class InputReader {
-
+    /**
+     *
+     * @param input_arr
+     * @return string without any extra stuff
+     */
     String argumentAfterCommand(String[] input_arr){
         int i = 1;
         String argument = null;
@@ -19,6 +26,11 @@ public class InputReader {
         }
         return argument;
     }
+    /**
+     *
+     * @param scanner
+     * @return new command extension
+     */
     public Command read(Scanner scanner) {
         Command cmd;
         try {

@@ -2,12 +2,16 @@ import Commands.Command;
 import com.company.Database;
 import com.company.InputReader;
 import xmlParser.Parser;
-
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    /**
+     * @author Alexandr Grebtsov
+     * Main class
+     * @param args
+     */
+    public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         InputReader inputReader = new InputReader();
         Database Database = new Database();

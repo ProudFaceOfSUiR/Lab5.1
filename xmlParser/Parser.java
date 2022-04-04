@@ -9,7 +9,15 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
+/**
+ * Class to parse from and to xml
+ */
 public class Parser {
+    /**
+     * Parses from xml
+     * @param database initialized, but empty
+     * @param file_path
+     */
     public static void parseFromXML(Database database, String file_path){
         BufferedInputStream bis = null;
         FileInputStream  fis= null;
@@ -45,7 +53,7 @@ public class Parser {
                     if(!r.readLine().trim().equals("</Coordinates>")) throw new NullPointerException();
                     newLine = r.readLine();
                     if(!newLine.contains("<creationDate>")||!newLine.contains("</creationDate>")) throw new NullPointerException();
-                    SimpleDateFormat formatter =new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
+                    SimpleDateFormat formatter =new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy", Locale.ENGLISH);
                     java.util.Date creationDate = formatter.parse(newLine.trim().replace("<creationDate>","").replace("</creationDate>",""));
                     newLine = r.readLine();
                     if(!newLine.contains("<Height>")||!newLine.contains("</Height>")) throw new NullPointerException();
@@ -73,9 +81,11 @@ public class Parser {
                     newLine = r.readLine();
                     if(!newLine.contains("<z>")||!newLine.contains("</z>")) throw new NullPointerException();
                     Float locZ = Float.valueOf(newLine.trim().replace("<z>","").replace("</z>",""));
-                    database.addNewElement(new Person(database.generateID() ,name,coordX,coordY,creationDate,height,eyeColor,hairColor,nationality,locX, locY,locZ));
+                    //atabase.addNewElement(new Person(database.generateID() ,name,coordX,coordY,creationDate,height,eyeColor,hairColor,nationality,locX, locY,locZ));
                     if(!r.readLine().trim().equals("</Location>")) throw new NullPointerException();
                     if(!r.readLine().trim().equals("</Person>")) throw new NullPointerException();
+                    database.addNewElement(new Person(database.generateID() ,name,coordX,coordY,creationDate,height,eyeColor,hairColor,nationality,locX, locY,locZ));
+                    //System.out.println(database);
                 }
                 newLine = r.readLine();
             }
@@ -84,7 +94,7 @@ public class Parser {
         {
             System.out.println("The specified file not found" + fnfe);
         }
-        catch (NumberFormatException numberFormatException){
+        catch (NumberFormatException | NotSatisyingParametrException numberFormatException){
             System.out.println("The XML is not readable");
         }
         catch(IllegalArgumentException illegalArgumentException){
@@ -96,8 +106,6 @@ public class Parser {
         }
         catch (NullPointerException pointerException){
             System.out.println("Unable to read file");
-        } catch (NotSatisyingParametrException e) {
-            e.printStackTrace();
         } catch (ParseException e) {
             e.printStackTrace();
         } finally
@@ -115,6 +123,11 @@ public class Parser {
         }
     }
 
+    /**
+     * Parses collection to xml
+     * @param database may not contain any element
+     * @return
+     */
     public static String parseToXML(Database database){
         StringBuilder sb = new StringBuilder();
 

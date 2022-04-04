@@ -2,6 +2,9 @@ package Commands;
 
 import com.company.Database;
 
+/**
+ * Providing exit from program
+ */
 public class Exit extends Command{
     public Exit(String argument) {
         super(argument);

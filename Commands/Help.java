@@ -2,6 +2,9 @@ package Commands;
 
 import com.company.Database;
 
+/**
+ * Just help
+ */
 public class Help extends Command{
     public Help(String argument) {
         super(argument);

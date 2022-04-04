@@ -2,6 +2,9 @@ package Commands;
 
 import com.company.Database;
 
+/**
+ * Prints story of executed commands
+ */
 public class History extends Command{
     public History(String argument) {
         super(argument);

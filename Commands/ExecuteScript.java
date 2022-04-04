@@ -7,12 +7,13 @@ import com.company.Person;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
+/**
+ * Executes script, every command starts with new line
+ */
 public class ExecuteScript extends Command {
     public ExecuteScript(String argument) {
         super(argument);
@@ -47,9 +48,12 @@ public class ExecuteScript extends Command {
             System.out.println("Script successfully executed");
         } catch (IOException fileNotFoundException){
             System.out.println("No such file");
-        } catch (NumberFormatException | NoSuchElementException exception){
+        } catch (NumberFormatException numberFormatException){
             System.out.println("File is incorrect");
-        } catch (RecursionException recursionException){
+        } catch (NoSuchElementException exception){
+            System.out.println("nsel");
+        }
+        catch (RecursionException recursionException){
             System.out.println("Recursion detected, interrupting");
         }
 

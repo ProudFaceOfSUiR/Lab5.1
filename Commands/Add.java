@@ -4,6 +4,10 @@ import com.company.Database;
 import com.company.Person;
 
 public class Add extends Command{
+    /**
+     * adds new Person
+     * @param argument
+     */
     public Add(String argument) {
         super(argument);
     }

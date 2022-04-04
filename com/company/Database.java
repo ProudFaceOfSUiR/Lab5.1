@@ -5,10 +5,14 @@ import Commands.Command;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.TreeSet;
+
+/**
+ *Handles collection and does operations with it, such as adding new, generating ID, logging
+ */
 public class Database {
     private TreeSet<Person> collection;
     private ArrayList<String> historyLog;
-    public String pathName;
+
     public void initialize(){
         collection = new TreeSet<>();
         historyLog = new ArrayList<>();
@@ -17,13 +21,24 @@ public class Database {
     public TreeSet<Person> getCollection() {
         return collection;
     }
-//todo move collection stuff to commands classes from here
+
+    /**
+     * @param person
+     */
     public void addNewElement(Person person){
         collection.add(person);
     }
+
+    /**
+     *
+     */
     public void clearCollection(){
             collection.clear();
     }
+
+    /**
+     * @param command
+     */
     public void updateHistoryLog(Command command){
         if (collection.size()>14)
             collection.remove(0);
@@ -31,6 +46,9 @@ public class Database {
         historyLog.add(command.getClass().getName().replace("Commands.",""));
     }
 
+    /**
+     * @return String history log
+     */
     public String getHistoryLog() {
         StringBuilder stringBuilder = new StringBuilder();
         for(String str :historyLog){
@@ -40,6 +58,9 @@ public class Database {
         return stringBuilder.toString();
     }
 
+    /**
+     * @return total height of every Person
+     */
     public int sumOfHeight(){
         int height = 0;
         for (Person person: collection){
@@ -47,10 +68,25 @@ public class Database {
         }
         return height;
     }
+
+    /**
+     * @returns ID
+     */
     public Long generateID(){
-        return (Long) (long) (collection.size() + 1);//todo norm ID
+        Long ID = 0L;
+        if(collection.size()>0)
+        for(Person p: collection){
+            if(ID<p.getId()) ID = p.getId();
+        }
+        else ID = 0L;
+        return ID+1;
     }
 
+    /**
+     * Generates new element with using console input
+     * @param id
+     * @return new Person
+     */
     public Person generateNewElement(Long id){
         System.out.print("Enter name: ");
         String name = FieldFiller.fillString(true);
@@ -73,7 +109,6 @@ public class Database {
         System.out.print("Z coordinate: ");
         Float Zloc = FieldFiller.fillZLoc();
         Date date = new Date();
-        //System.out.println(date.toString());
         if(id==-1L) id = generateID();
         return new Person(id,name, XCoord, YCoord, date, height, eyeColor, hairColor,country, XLoc, Yloc, Zloc);
     }

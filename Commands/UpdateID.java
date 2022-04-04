@@ -2,6 +2,9 @@ package Commands;
 
 import com.company.Database;
 
+/**
+ * Changes values of the element via ID
+ */
 public class UpdateID extends Command{
     public UpdateID(String argument) {
         super(argument);
