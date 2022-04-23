@@ -1,0 +1,18 @@
+package Commands;
+import java.io.IOException;
+import com.company.Database;
+
+/**
+ * Parent class for every command
+ */
+public abstract class Command {
+    String argument;
+    public void execute(Database database) throws IOException {
+        System.out.println(this.getClass());
+    }
+    public Command(String argument){
+        this.argument = argument;
+    }
+
+    //public abstract void execute(Database database);
+}
