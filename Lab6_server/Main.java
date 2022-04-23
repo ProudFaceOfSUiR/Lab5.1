@@ -13,9 +13,8 @@ public class Main {
      * @author Alexandr Grebtsov
      * Main class
      */
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         Server server = new Server();
-        server.initialize();
         Scanner scanner = new Scanner(System.in);
         InputReader inputReader = new InputReader();
         Database Database = new Database();
@@ -23,12 +22,15 @@ public class Main {
         if (args.length > 0) Parser.parseFromXML(Database, args[0]);
         else System.out.println("No file");
         while (true) {
-            try {
-                Command command = inputReader.read(scanner);
-                command.execute(Database);
-                Database.updateHistoryLog(command);
-            } catch (Exception ignored) {
-            }
+                if (!server.connected)
+                server.waitUntilClient();
+                else {
+                    Command command = server.recieveCommand();
+                    System.out.println(command);
+                    command.execute(Database);
+                    Database.updateHistoryLog(command);
+                }
+
         }
     }
 }

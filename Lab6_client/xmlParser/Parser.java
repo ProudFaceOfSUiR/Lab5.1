@@ -1,6 +1,6 @@
 package xmlParser;
 
-import Exceptions.NotSatisyingParametrException;
+
 import com.company.Database;
 import com.company.Person;
 import java.io.*;
@@ -8,6 +8,7 @@ import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
+import Exceptions.NotSatisyingParametrException;
 
 /**
  * Class to parse from and to xml

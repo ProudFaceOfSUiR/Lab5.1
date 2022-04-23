@@ -1,11 +1,13 @@
 package Commands;
 import java.io.IOException;
+import java.io.Serializable;
+
 import com.company.Database;
 
 /**
  * Parent class for every command
  */
-public class Command {
+public class Command implements Serializable {
     String argument;
     public void execute(Database database) throws IOException {
         System.out.println(this.getClass());
