@@ -14,7 +14,7 @@ public class Help extends Command implements Serializable {
 
     @Override
     public void execute(Database database) {
-        String helpMessage = "Display information about builtin commands\n\n" +
+        answer = "Display information about builtin commands\n\n" +
                 "info : вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)\n" +
                 "show : вывести в стандартный поток вывода все элементы коллекции в строковом представлении\n" +
                 "add {element} : добавить новый элемент в коллекцию\n" +
@@ -30,6 +30,7 @@ public class Help extends Command implements Serializable {
                 "sum_of_height : вывести сумму значений поля height для всех элементов коллекции\n" +
                 "filter_starts_with_name name : вывести элементы, значение поля name которых начинается с заданной подстроки\n" +
                 "filter_less_than_location location : вывести элементы, значение поля location которых меньше заданного";
-        System.out.println(helpMessage);
+        //System.out.println(helpMessage);
+        //answer = helpMessage;
     }
 }

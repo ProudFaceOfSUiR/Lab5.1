@@ -13,6 +13,5 @@ public class Error extends Command implements Serializable {
     }
     @Override
     public void execute(Database database){
-        System.out.println("Unknown command, try help");
     }
 }

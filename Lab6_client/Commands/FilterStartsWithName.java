@@ -11,20 +11,5 @@ public class FilterStartsWithName extends Command{
         super(argument);
     }
     @Override
-    public void execute(Database database){
-        try {
-            boolean contains = false;
-            for (Person p : database.getCollection()) {
-                if (p.getName().startsWith(argument)&&!argument.equals("")) {
-                    System.out.println(p);
-                    contains = true;
-                }
-            }
-            if (!contains)
-                System.out.println("No such elements");
-        }catch (NullPointerException exception)
-        {
-            System.out.println("No argument");
-        }
-    }
+    public void execute(Database database){}
 }

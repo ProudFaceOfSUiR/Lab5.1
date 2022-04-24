@@ -12,12 +12,13 @@ public class RemoveByID extends Command{
     @Override
     public void execute(Database database) {
         try {
+            if(argument == null) throw new NullPointerException();
             if (database.getCollection().removeIf(p -> p.getId().equals(Long.parseLong(argument))))
-                System.out.println("Element successfully removed");
+                answer = "Element successfully removed";
             else
-                System.out.println("No such ID");
+                answer = "No such ID";
         }catch (NullPointerException | NumberFormatException e){
-            System.out.println("No argument");
+            answer = "No argument";
         }
     }
 }

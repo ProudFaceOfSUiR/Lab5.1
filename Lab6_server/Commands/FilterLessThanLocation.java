@@ -12,13 +12,14 @@ public class FilterLessThanLocation extends Command{
     @Override
     public void execute(Database database){
         try {
+            if(argument == null) throw new NullPointerException();
             for (Person person:database.getCollection()){
                 if(person.getLocation().compareTo(Float.parseFloat(argument))>0)
-                    System.out.println(person);
+                    answer += person.toString();
             }
         }
         catch (NullPointerException e){
-            System.out.println("No argument");
+            answer = "No argument";
         }
     }
 }

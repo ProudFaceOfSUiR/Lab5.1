@@ -1,7 +1,6 @@
 import Commands.Command;
 import Network.Server;
 import com.company.Database;
-import com.company.InputReader;
 import xmlParser.Parser;
 
 import java.io.IOException;
@@ -16,7 +15,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Server server = new Server();
         Scanner scanner = new Scanner(System.in);
-        InputReader inputReader = new InputReader();
         Database Database = new Database();
         Database.initialize();
         if (args.length > 0) Parser.parseFromXML(Database, args[0]);
@@ -28,9 +26,9 @@ public class Main {
                     Command command = server.recieveCommand();
                     System.out.println(command);
                     command.execute(Database);
+                    server.sendCommand(command);
                     Database.updateHistoryLog(command);
                 }
-
         }
     }
 }

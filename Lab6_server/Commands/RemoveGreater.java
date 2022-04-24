@@ -12,9 +12,10 @@ public class RemoveGreater extends Command{
     @Override
     public void execute(Database database) {
         try {
+            if (argument == null) throw new NullPointerException();
             database.getCollection().removeIf(p -> p.getId() > (Long.parseLong(argument)));
         }catch (NumberFormatException numberFormatException){
-            System.out.println("No arguments");
+            answer = "No arguments";
     }
     }
 

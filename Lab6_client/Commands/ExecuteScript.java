@@ -8,6 +8,7 @@ import com.company.Person;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -15,6 +16,7 @@ import java.util.Scanner;
  * Executes script, every command starts with new line
  */
 public class ExecuteScript extends Command {
+    LinkedList<Command> commands = new LinkedList<>();
     public ExecuteScript(String argument) {
         super(argument);
     }
@@ -28,21 +30,26 @@ public class ExecuteScript extends Command {
             while (scanner.hasNext()) {
                 Command command = inputReader.read(scanner);
                 if (command.getClass().toString().equals("class Commands.ExecuteScript")&&command.argument.equals(argument)){
-                    throw new RecursionException();
+                    commands.add(new Error("Recursion detected"));
                 }
                 if (command.getClass().toString().equals("class Commands.Add")){
-                    datebase.addNewElement(new Person(datebase.generateID(), scanner.nextLine(),Integer.parseInt(scanner.nextLine()), Float.parseFloat(scanner.nextLine()),
+                    Person person = new Person(datebase.generateID(), scanner.nextLine(),Integer.parseInt(scanner.nextLine()), Float.parseFloat(scanner.nextLine()),
                            new Date(), Integer.parseInt(scanner.nextLine()), Person.Color.valueOf(scanner.nextLine()), Person.Color.valueOf(scanner.nextLine()),
-                            Person.Country.valueOf(scanner.nextLine()), Long.parseLong(scanner.nextLine()), Float.parseFloat(scanner.nextLine()), Float.parseFloat(scanner.nextLine())));
+                            Person.Country.valueOf(scanner.nextLine()), Long.parseLong(scanner.nextLine()), Float.parseFloat(scanner.nextLine()), Float.parseFloat(scanner.nextLine()));
+                    Add add = (Add) command;
+                    add.setPerson(person);
+                    commands.add(add);
                 } else {
                     if (command.getClass().toString().equals("class Commands.UpdateID")) {
-                        Command removeID = new RemoveByID(command.argument);
-                        removeID.execute(datebase);
-                        datebase.addNewElement(new Person(Long.parseLong(command.argument), scanner.nextLine(), Integer.parseInt(scanner.nextLine()), Float.parseFloat(scanner.nextLine()),
+                        UpdateID updateByID= new UpdateID(command.argument);
+                        //removeID.execute(datebase);
+                        Person person = new Person(Long.parseLong(command.argument), scanner.nextLine(), Integer.parseInt(scanner.nextLine()), Float.parseFloat(scanner.nextLine()),
                                 new Date(), Integer.parseInt(scanner.nextLine()), Person.Color.valueOf(scanner.nextLine()), Person.Color.valueOf(scanner.nextLine()),
-                                Person.Country.valueOf(scanner.nextLine()), Long.parseLong(scanner.nextLine()), Float.parseFloat(scanner.nextLine()), Float.parseFloat(scanner.nextLine())));
+                                Person.Country.valueOf(scanner.nextLine()), Long.parseLong(scanner.nextLine()), Float.parseFloat(scanner.nextLine()), Float.parseFloat(scanner.nextLine()));
+                        updateByID.setPerson(person);
+                        commands.add(updateByID);
                     } else
-                        command.execute(datebase);
+                        commands.add(command);
                 }
             }
             System.out.println("Script successfully executed");
@@ -52,9 +59,6 @@ public class ExecuteScript extends Command {
             System.out.println("File is incorrect");
         } catch (NoSuchElementException exception){
             System.out.println("nsel");
-        }
-        catch (RecursionException recursionException){
-            System.out.println("Recursion detected, interrupting");
         }
 
     }

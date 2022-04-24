@@ -10,7 +10,6 @@ public class SumOfHeight extends Command{
         super(argument);
     }
     @Override
-    public void execute(Database database){
-        System.out.println("Total height is " + database.sumOfHeight());
+    public void execute(Database database){answer = "Total height is " + database.sumOfHeight();
     }
 }

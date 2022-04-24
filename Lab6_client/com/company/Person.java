@@ -30,6 +30,10 @@ public class Person implements Comparable<Person>, Serializable {
         this.location = new Location(locX, locY, locZ);
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }
@@ -82,7 +86,7 @@ public class Person implements Comparable<Person>, Serializable {
         return hairColor;
     }
 
-    public static class Coordinates {
+    public static class Coordinates implements Serializable{
         private Integer x; //Значение поля должно быть больше -616, Поле не может быть null
         private float y;
 
@@ -105,7 +109,7 @@ public class Person implements Comparable<Person>, Serializable {
                     ", y=" + y;
         }
     }
-    public static class Location implements Comparable<Float>{
+    public static class Location implements Comparable<Float>, Serializable{
         private Long x; //Поле не может быть null
         private float y;
         private Float z; //Поле не может быть null

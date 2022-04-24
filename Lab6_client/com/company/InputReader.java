@@ -77,9 +77,6 @@ public class InputReader {
                 case ("clear"):
                     cmd = new Clear(null);
                     break;
-                case ("save"):
-                    cmd = new Save(argumentAfterCommand(input_arr));
-                    break;
                 case ("execute_script"):
                     cmd = new ExecuteScript(argumentAfterCommand(input_arr));
                     break;

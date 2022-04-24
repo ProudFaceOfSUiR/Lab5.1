@@ -13,18 +13,19 @@ public class FilterStartsWithName extends Command{
     @Override
     public void execute(Database database){
         try {
+            if(argument == null) throw new NullPointerException();
             boolean contains = false;
             for (Person p : database.getCollection()) {
                 if (p.getName().startsWith(argument)&&!argument.equals("")) {
-                    System.out.println(p);
+                    answer+=p;
                     contains = true;
                 }
             }
             if (!contains)
-                System.out.println("No such elements");
+                answer = "No such elements";
         }catch (NullPointerException exception)
         {
-            System.out.println("No argument");
+            answer = "No argument";
         }
     }
 }
