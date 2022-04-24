@@ -3,104 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f2497d8f-33a5-4968-9a2f-35eb3e7b6c45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/Add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/Clear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/Error.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/ExecuteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/ExecuteScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/FilterLessThanLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/FilterLessThanLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/FilterStartsWithName.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/FilterStartsWithName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/Help.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/RemoveByID.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/RemoveByID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/RemoveGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/RemoveGreater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/RemoveLower.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/RemoveLower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/Save.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/Show.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/SumOfHeight.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/SumOfHeight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/UpdateID.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/UpdateID.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Network/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/company/InputReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/company/InputReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/company/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Add.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Add.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Clear.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Clear.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Error.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Error.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/ExecuteScript.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/ExecuteScript.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/FilterLessThanLocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/FilterLessThanLocation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/FilterStartsWithName.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/FilterStartsWithName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Help.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Help.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/History.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/History.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/RemoveByID.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/RemoveByID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/RemoveGreater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/RemoveGreater.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/RemoveLower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/RemoveLower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Save.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Show.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Show.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/SumOfHeight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/SumOfHeight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/UpdateID.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/UpdateID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Network/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Network/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/InputReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/InputReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Color.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Coordinates.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Coordinates.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Country.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Clear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Error.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/ExecuteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/ExecuteScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Exit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/FilterLessThanLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/FilterLessThanLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/FilterStartsWithName.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/FilterStartsWithName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Help.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/RemoveByID.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/RemoveByID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/RemoveGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/RemoveGreater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/RemoveLower.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/RemoveLower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Save.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Show.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/SumOfHeight.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/SumOfHeight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/UpdateID.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/UpdateID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Network/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab6_server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/Network/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Network/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab6_server/Network/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Network/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/com/company/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/com/company/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/com/company/FieldFiller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/com/company/InputReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/com/company/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Add.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Add.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Clear.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Clear.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Error.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Error.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/ExecuteScript.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/ExecuteScript.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Exit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/FilterLessThanLocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/FilterLessThanLocation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/FilterStartsWithName.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/FilterStartsWithName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Help.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Help.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/History.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/History.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/RemoveByID.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/RemoveByID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/RemoveGreater.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/RemoveGreater.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/RemoveLower.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/RemoveLower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Save.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Show.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Show.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/SumOfHeight.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/SumOfHeight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/UpdateID.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/UpdateID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/FieldFiller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/InputReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Color.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Coordinates.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Coordinates.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Country.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +66,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650747696180</updated>
-      <workItem from="1650747698787" duration="15079000" />
+      <workItem from="1650747698787" duration="15536000" />
+      <workItem from="1650835541612" duration="2370000" />
     </task>
     <servers />
   </component>

@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2497d8f-33a5-4968-9a2f-35eb3e7b6c45" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab6_server/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/Error.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6_client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab6_client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Network/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Network/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/company/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Error.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Commands/Error.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Color.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Coordinates.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Coordinates.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Country.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person$Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/xmlParser/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/xmlParser/Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xmlParser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/xmlParser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Error.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Network/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Network/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/com/company/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Error.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/Error.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Color.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Coordinates.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Coordinates.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Country.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person$Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +18,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -83,11 +60,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650747696180</updated>
-      <workItem from="1650747698787" duration="845000" />
+      <workItem from="1650747698787" duration="15536000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

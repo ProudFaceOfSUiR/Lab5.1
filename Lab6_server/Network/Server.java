@@ -20,14 +20,21 @@ public class Server {
     DatagramPacket inputPacket;
     ByteArrayOutputStream bStream;
 
-    public void waitUntilClient(){
+    public Server(){
+        try {
+            datagramSocket = new DatagramSocket(SERVICE_PORT);
+        } catch (SocketException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void bind(){
         try {
             bStream = new ByteArrayOutputStream();
             datagramSocket = new DatagramSocket(SERVICE_PORT);
             inputPacket = new DatagramPacket(receivingDataBuffer, receivingDataBuffer.length);
             datagramSocket.receive(inputPacket);
             ObjectInputStream iStream = new ObjectInputStream(new ByteArrayInputStream(inputPacket.getData()));
-            //System.out.println(iStream.readObject().getClass());
             Message message = (Message) iStream.readObject();
             iStream.close();
             connected = true;
@@ -45,6 +52,23 @@ public class Server {
             e.printStackTrace();
         }
 
+    }
+
+    public Message recieveMessage(){
+        try {
+            inputPacket = new DatagramPacket(receivingDataBuffer, receivingDataBuffer.length);
+            datagramSocket.receive(inputPacket);
+            ObjectInputStream iStream = new ObjectInputStream(new ByteArrayInputStream(inputPacket.getData()));
+            Message message = (Message) iStream.readObject();
+            iStream.close();
+            return message;
+        } catch (IOException e){
+            System.out.println("Unable to receive command");
+            return null;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public Command recieveCommand(){
@@ -65,7 +89,7 @@ public class Server {
     }
 
     public void sendCommand(Command command) throws IOException {
-        Message message = new Message(command, null, Status.ESTABLISHED);
+        Message message = new Message(command, Status.ESTABLISHED);
         DatagramSocket clientSocket = new DatagramSocket();
         IPAddress = InetAddress.getByName("localhost");
         bStream = new ByteArrayOutputStream();
@@ -75,6 +99,5 @@ public class Server {
         byte[] serializedMessage = bStream.toByteArray();
         DatagramPacket sendingPacket = new DatagramPacket(serializedMessage, serializedMessage.length,IPAddress, 50002);
         clientSocket.send(sendingPacket);
-        //System.out.println(message.getCommand());
     }
 }

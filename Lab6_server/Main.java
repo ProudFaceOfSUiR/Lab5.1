@@ -1,10 +1,10 @@
-import Commands.Command;
+import Network.Message;
 import Network.Server;
+import Network.Status;
 import com.company.Database;
 import xmlParser.Parser;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Main {
     /**
@@ -14,22 +14,23 @@ public class Main {
      */
     public static void main(String[] args) throws IOException {
         Server server = new Server();
-        Scanner scanner = new Scanner(System.in);
         Database Database = new Database();
         Database.initialize();
         if (args.length > 0) Parser.parseFromXML(Database, args[0]);
         else System.out.println("No file");
         while (true) {
-                if (!server.connected)
-                server.waitUntilClient();
-                else {
-                    Command command = server.recieveCommand();
-                    System.out.println(command);
-                    command.execute(Database);
-                    server.sendCommand(command);
-                    Database.updateHistoryLog(command);
-                }
+            Message message = server.recieveMessage();
+            if(message.getStatus()== Status.ESTABLISHED) {
+                //System.out.println(message.getCommand());
+                message.getCommand().execute(Database);
+                server.sendCommand(message.getCommand());
+                Database.updateHistoryLog(message.getCommand());
+            }
+            if(message.getStatus() == Status.NOT_ESTABLISHED){
+                server.sendCommand(null);
+            }
         }
     }
 }
+
 
