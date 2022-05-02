@@ -42,7 +42,6 @@ public class ExecuteScript extends Command {
                 } else {
                     if (command.getClass().toString().equals("class Commands.UpdateID")) {
                         UpdateID updateByID= new UpdateID(command.argument);
-                        //removeID.execute(datebase);
                         Person person = new Person(Long.parseLong(command.argument), scanner.nextLine(), Integer.parseInt(scanner.nextLine()), Float.parseFloat(scanner.nextLine()),
                                 new Date(), Integer.parseInt(scanner.nextLine()), Person.Color.valueOf(scanner.nextLine()), Person.Color.valueOf(scanner.nextLine()),
                                 Person.Country.valueOf(scanner.nextLine()), Long.parseLong(scanner.nextLine()), Float.parseFloat(scanner.nextLine()), Float.parseFloat(scanner.nextLine()));
@@ -52,7 +51,6 @@ public class ExecuteScript extends Command {
                         commands.add(command);
                 }
             }
-            System.out.println("Script successfully executed");
         } catch (IOException fileNotFoundException){
             System.out.println("No such file");
         } catch (NumberFormatException numberFormatException){

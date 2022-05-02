@@ -1,13 +1,13 @@
 package Network;
 
 import Commands.Command;
-import com.company.Person;
 
 import java.io.Serializable;
 
 public class Message implements Serializable {
     private Command command;
     private Status status;
+    private int port;
 
     public Message(Command command, Status status){
         this.command = command;
@@ -18,6 +18,9 @@ public class Message implements Serializable {
         return command;
     }
 
+    public int getPort() {
+        return port;
+    }
 
     public Status getStatus() {
         return status;

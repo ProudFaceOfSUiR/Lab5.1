@@ -3,6 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="f2497d8f-33a5-4968-9a2f-35eb3e7b6c45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Commands/ExecuteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/ExecuteScript.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/company/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/company/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/xmlParser/Parser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xmlParser/Parser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/ExecuteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/ExecuteScript.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/Network/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Network/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/Network/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Network/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/com/company/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/com/company/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/test2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/test2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +58,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Client" type="Application" factoryName="Application">
@@ -61,6 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1650747696180</updated>
       <workItem from="1650747698787" duration="15536000" />
+      <workItem from="1650835541612" duration="4425000" />
     </task>
     <servers />
   </component>

@@ -58,7 +58,7 @@ public class Person implements Comparable<Person>, Serializable {
     public String toString(){
         String info = "ID: " + id + "\nName: " + name + "\nCoordinates:" + coordinates +
                 "\nCreation date:" + creationDate + "\nHeight:" + height + "\nEye color:"
-                + eyeColor + "\nHair Color:" + hairColor + "\nNationality:" + nationality + "\nLocation:" + location;
+                + eyeColor + "\nHair Color:" + hairColor + "\nNationality:" + nationality + "\nLocation:" + location+"\n";
         return info;
     }
 

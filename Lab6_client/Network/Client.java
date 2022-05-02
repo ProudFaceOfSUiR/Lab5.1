@@ -18,7 +18,7 @@ public class Client {
 
     public Client(){
         try {
-            datagramSocket = new DatagramSocket(50002);
+            datagramSocket = new DatagramSocket(228);
             datagramSocket.setSoTimeout(5000);
         } catch (SocketException e) {
             //e.printStackTrace();

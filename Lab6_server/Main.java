@@ -21,7 +21,6 @@ public class Main {
         while (true) {
             Message message = server.recieveMessage();
             if(message.getStatus()== Status.ESTABLISHED) {
-                //System.out.println(message.getCommand());
                 message.getCommand().execute(Database);
                 server.sendCommand(message.getCommand());
                 Database.updateHistoryLog(message.getCommand());

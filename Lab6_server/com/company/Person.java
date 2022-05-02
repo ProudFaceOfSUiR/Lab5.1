@@ -7,6 +7,7 @@ import java.util.Date;
  * Class carrying Persons to be part of the collection
  */
 public class Person implements Comparable<Person>, Serializable {
+
     private Long id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null

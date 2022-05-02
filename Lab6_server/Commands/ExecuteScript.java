@@ -1,15 +1,8 @@
 package Commands;
-
-import Exceptions.RecursionException;
 import com.company.Database;
-import com.company.Person;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.Date;
 import java.util.LinkedList;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
 
 /**
  * Executes script, every command starts with new line

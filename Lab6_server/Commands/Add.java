@@ -21,6 +21,7 @@ public class Add extends Command {
         System.out.println(database);
         this.answer = person.toString();
     }
+
     public void setPerson(Person person) {
         this.person = person;
     }

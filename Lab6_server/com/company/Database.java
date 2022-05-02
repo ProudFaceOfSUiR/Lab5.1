@@ -3,7 +3,6 @@ package com.company;
 import Commands.Command;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.TreeSet;
 
 /**
@@ -86,10 +85,7 @@ public class Database {
     public String toString(){
         StringBuilder stringBuilder = new StringBuilder();
         if(collection.size()>0) {
-            for (Person person : collection) {
-                stringBuilder.append("\n");
-                stringBuilder.append(person);
-            }
+            collection.forEach(stringBuilder::append);
             stringBuilder.append("\n");
         } else stringBuilder.append("Collection is empty");
         return stringBuilder.toString();

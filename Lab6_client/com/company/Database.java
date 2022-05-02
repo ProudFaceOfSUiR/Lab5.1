@@ -1,7 +1,5 @@
 package com.company;
 
-import Commands.Command;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.TreeSet;
@@ -16,57 +14,6 @@ public class Database {
     public void initialize(){
         collection = new TreeSet<>();
         historyLog = new ArrayList<>();
-    }
-
-    public TreeSet<Person> getCollection() {
-        return collection;
-    }
-
-    /**
-     * @param person
-     */
-    public void addNewElement(Person person){
-        collection.add(person);
-    }
-
-    /**
-     *
-     */
-    public void clearCollection(){
-            collection.clear();
-    }
-
-    /**
-     * @param command
-     */
-    public void updateHistoryLog(Command command){
-        if (collection.size()>14)
-            collection.remove(0);
-        if(!command.getClass().getName().equals("Commands.Error"))
-        historyLog.add(command.getClass().getName().replace("Commands.",""));
-    }
-
-    /**
-     * @return String history log
-     */
-    public String getHistoryLog() {
-        StringBuilder stringBuilder = new StringBuilder();
-        for(String str :historyLog){
-            stringBuilder.append(str);
-            stringBuilder.append("\n");
-        }
-        return stringBuilder.toString();
-    }
-
-    /**
-     * @return total height of every Person
-     */
-    public int sumOfHeight(){
-        int height = 0;
-        for (Person person: collection){
-            height+=person.getHeight();
-        }
-        return height;
     }
 
     /**
@@ -116,10 +63,7 @@ public class Database {
     public String toString(){
         StringBuilder stringBuilder = new StringBuilder();
         if(collection.size()>0) {
-            for (Person person : collection) {
-                stringBuilder.append("\n");
-                stringBuilder.append(person);
-            }
+            collection.forEach(stringBuilder::append);
             stringBuilder.append("\n");
         } else stringBuilder.append("Collection is empty");
         return stringBuilder.toString();
