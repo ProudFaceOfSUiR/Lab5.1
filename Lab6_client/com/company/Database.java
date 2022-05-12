@@ -57,7 +57,7 @@ public class Database {
         Float Zloc = FieldFiller.fillZLoc();
         Date date = new Date();
         if(id==-1L) id = generateID();
-        return new Person(id,name, XCoord, YCoord, date, height, eyeColor, hairColor,country, XLoc, Yloc, Zloc);
+        return new Person(id, name, "not done", XCoord, YCoord, date, height, eyeColor, hairColor,country, XLoc, Yloc, Zloc);
     }
     @Override
     public String toString(){

@@ -84,7 +84,7 @@ public class Parser {
                     //atabase.addNewElement(new Person(database.generateID() ,name,coordX,coordY,creationDate,height,eyeColor,hairColor,nationality,locX, locY,locZ));
                     if(!r.readLine().trim().equals("</Location>")) throw new NullPointerException();
                     if(!r.readLine().trim().equals("</Person>")) throw new NullPointerException();
-                    database.addNewElement(new Person(database.generateID() ,name,coordX,coordY,creationDate,height,eyeColor,hairColor,nationality,locX, locY,locZ));
+                    database.addNewElement(new Person(database.generateID() ,name, "not done yet",coordX,coordY,creationDate,height,eyeColor,hairColor,nationality,locX, locY,locZ));
                     //System.out.println(database);
                 }
                 newLine = r.readLine();

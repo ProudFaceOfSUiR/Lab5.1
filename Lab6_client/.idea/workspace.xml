@@ -4,27 +4,15 @@
     <list default="true" id="f2497d8f-33a5-4968-9a2f-35eb3e7b6c45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Commands/ExecuteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/ExecuteScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Network/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Network/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/company/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/company/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/com/company/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/xmlParser/Parser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xmlParser/Parser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/ExecuteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/ExecuteScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Help.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/company/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/Lab6_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Lab6_server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab6_server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Network/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Network/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Network/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Network/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/com/company/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/com/company/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab6_server/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/com/company/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Lab6_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Lab6_server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/test2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/test2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/xmlParser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/xmlParser/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +53,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -90,7 +82,9 @@
       <updated>1650747696180</updated>
       <workItem from="1650747698787" duration="15536000" />
       <workItem from="1650835541612" duration="4425000" />
-      <workItem from="1651518863100" duration="2870000" />
+      <workItem from="1651518863100" duration="3417000" />
+      <workItem from="1652353648880" duration="2623000" />
+      <workItem from="1652361751218" duration="2360000" />
     </task>
     <servers />
   </component>

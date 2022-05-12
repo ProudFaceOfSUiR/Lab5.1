@@ -1,6 +1,7 @@
 import Network.Message;
 import Network.Server;
 import Network.Status;
+import PostgreSQL.DatabaseManager;
 import com.company.Database;
 import xmlParser.Parser;
 
@@ -16,6 +17,12 @@ public class Main {
         Server server = new Server();
         Database Database = new Database();
         Database.initialize();
+        DatabaseManager databaseManager = new DatabaseManager();
+        databaseManager.initialize();
+        databaseManager.createNewUserBase();
+        databaseManager.readCollectionFromDatabase(Database);
+        databaseManager.addElementToDatabase(Database.getCollection().first());
+        //DatabaseManager.execute();
         if (args.length > 0) Parser.parseFromXML(Database, args[0]);
         else System.out.println("No file");
         while (true) {

@@ -16,10 +16,12 @@ public class Person implements Comparable<Person>, Serializable {
     private Color hairColor; //Поле не может быть null
     private Country nationality; //Поле может быть null
     private Location location; //Поле не может быть null
+    private String userName;
 
-    public Person(Long id, String name, Integer coordX, float coordY, java.util.Date creationDate, int height,
+    public Person(Long id, String userName, String name, Integer coordX, float coordY, java.util.Date creationDate, int height,
                   Color eyeColor ,Color hairColor, Country nationality, Long locX, float locY, Float locZ){
         this.id = id;
+        this.userName = userName;
         this.name = name;
         this.coordinates = new Coordinates(coordX, coordY);
         this.creationDate = creationDate;

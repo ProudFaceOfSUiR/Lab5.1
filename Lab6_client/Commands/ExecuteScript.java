@@ -33,7 +33,7 @@ public class ExecuteScript extends Command {
                     commands.add(new Error("Recursion detected"));
                 }
                 if (command.getClass().toString().equals("class Commands.Add")){
-                    Person person = new Person(datebase.generateID(), scanner.nextLine(),Integer.parseInt(scanner.nextLine()), Float.parseFloat(scanner.nextLine()),
+                    Person person = new Person(datebase.generateID(), "not done yet",scanner.nextLine(),Integer.parseInt(scanner.nextLine()), Float.parseFloat(scanner.nextLine()),
                            new Date(), Integer.parseInt(scanner.nextLine()), Person.Color.valueOf(scanner.nextLine()), Person.Color.valueOf(scanner.nextLine()),
                             Person.Country.valueOf(scanner.nextLine()), Long.parseLong(scanner.nextLine()), Float.parseFloat(scanner.nextLine()), Float.parseFloat(scanner.nextLine()));
                     Add add = (Add) command;
@@ -42,7 +42,7 @@ public class ExecuteScript extends Command {
                 } else {
                     if (command.getClass().toString().equals("class Commands.UpdateID")) {
                         UpdateID updateByID= new UpdateID(command.argument);
-                        Person person = new Person(Long.parseLong(command.argument), scanner.nextLine(), Integer.parseInt(scanner.nextLine()), Float.parseFloat(scanner.nextLine()),
+                        Person person = new Person(Long.parseLong(command.argument), "not done yet",scanner.nextLine(), Integer.parseInt(scanner.nextLine()), Float.parseFloat(scanner.nextLine()),
                                 new Date(), Integer.parseInt(scanner.nextLine()), Person.Color.valueOf(scanner.nextLine()), Person.Color.valueOf(scanner.nextLine()),
                                 Person.Country.valueOf(scanner.nextLine()), Long.parseLong(scanner.nextLine()), Float.parseFloat(scanner.nextLine()), Float.parseFloat(scanner.nextLine()));
                         updateByID.setPerson(person);
