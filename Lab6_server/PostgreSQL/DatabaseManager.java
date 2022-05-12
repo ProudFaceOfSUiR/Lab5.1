@@ -67,7 +67,8 @@ public class DatabaseManager {
         while (rs.next()) {
             Person person = new Person(rs.getLong("id"), rs.getString("user1"), rs.getString("name1"),
                     rs.getInt("coordinatex"), rs.getFloat("coordinatey"), new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy", Locale.ENGLISH).parse(rs.getString("creationdate")),
-                    rs.getInt("height"), Person.Color.valueOf(rs.getString("eyecolor").toUpperCase(Locale.ROOT)), Person.Color.valueOf(rs.getString("haircolor").toUpperCase(Locale.ROOT)), Person.Country.valueOf(rs.getString("nationality").toUpperCase(Locale.ROOT)), rs.getLong("locationx"),
+                    rs.getInt("height"), Person.Color.valueOf(rs.getString("eyecolor").toUpperCase(Locale.ROOT)), Person.Color.valueOf(rs.getString("haircolor").toUpperCase(Locale.ROOT)),
+                    Person.Country.valueOf(rs.getString("nationality").toUpperCase(Locale.ROOT)), rs.getLong("locationx"),
                     rs.getFloat("locationy"), rs.getFloat("locationz"));
             System.out.println(person);
             database.getCollection().add(person);
@@ -83,8 +84,8 @@ public class DatabaseManager {
             String sql = "INSERT INTO USERBASE (USER1, NAME1, COORDINATEX,COORDINATEY, CREATIONDATE, HEIGHT, " +
                     "EYECOLOR, HAIRCOLOR, NATIONALITY, LOCATIONX ,LOCATIONY, LOCATIONZ ) VALUES ('" +
                     person.getUserName() + "','" + person.getName() + "','" + person.getCoordinates().getX() + "','" + person.getCoordinates().getY() + "','" +
-                    person.getCreationDate().toString() + "','" + person.getHeight() + "','" + person.getEyeColor() + "','" + person.getHairColor() + "','"
-                    + person.getNationality() + "','" + person.getLocation().getX() + "','" + person.getLocation().getY() + "','" + person.getLocation().getZ() + "');";
+                    person.getCreationDate().toString() + "','" + person.getHeight() + "','" + person.getEyeColor() + "','" + person.getHairColor() + "','" +
+                    person.getNationality() + "','" + person.getLocation().getX() + "','" + person.getLocation().getY() + "','" + person.getLocation().getZ() + "');";
             stmt.executeUpdate(sql);
         } catch (SQLException e){
             e.printStackTrace();

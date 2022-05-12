@@ -1,5 +1,6 @@
 import Commands.Command;
 import Network.Client;
+import Security.LoginController;
 import com.company.Database;
 import com.company.InputReader;
 
@@ -16,6 +17,8 @@ public class Main{
         Command command;
         Scanner scanner = new Scanner(System.in);
         InputReader inputReader = new InputReader();
+        LoginController loginController = new LoginController();
+        loginController.login();
         while (true){
             try {
                 command = inputReader.read(scanner);

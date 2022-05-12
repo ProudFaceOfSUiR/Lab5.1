@@ -3,16 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f2497d8f-33a5-4968-9a2f-35eb3e7b6c45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commands/ExecuteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/ExecuteScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/company/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/company/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/company/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Lab6_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Lab6_server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/com/company/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Lab6_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Lab6_server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/xmlParser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/xmlParser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Network/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/Network/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Network/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/PostgreSQL/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/PostgreSQL/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/PostgreSQL/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/PostgreSQL/DatabaseManager.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -84,7 +80,7 @@
       <workItem from="1650835541612" duration="4425000" />
       <workItem from="1651518863100" duration="3417000" />
       <workItem from="1652353648880" duration="2623000" />
-      <workItem from="1652361751218" duration="2360000" />
+      <workItem from="1652361751218" duration="4172000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,7 @@ public class Message implements Serializable {
     private Command command;
     private Status status;
     private int port;
+    private Login login;
 
     public Message(Command command, Status status){
         this.command = command;
