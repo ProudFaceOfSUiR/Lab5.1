@@ -1,5 +1,7 @@
 package com.company;
 
+import Security.LoginController;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.TreeSet;
@@ -10,10 +12,12 @@ import java.util.TreeSet;
 public class Database {
     private TreeSet<Person> collection;
     private ArrayList<String> historyLog;
+    private LoginController loginController;
 
-    public void initialize(){
+    public void initialize(LoginController loginController){
         collection = new TreeSet<>();
         historyLog = new ArrayList<>();
+        this.loginController = loginController;
     }
 
     /**
@@ -57,7 +61,7 @@ public class Database {
         Float Zloc = FieldFiller.fillZLoc();
         Date date = new Date();
         if(id==-1L) id = generateID();
-        return new Person(id, name, "not done", XCoord, YCoord, date, height, eyeColor, hairColor,country, XLoc, Yloc, Zloc);
+        return new Person(id, loginController.getLogin(), name, XCoord, YCoord, date, height, eyeColor, hairColor,country, XLoc, Yloc, Zloc);
     }
     @Override
     public String toString(){

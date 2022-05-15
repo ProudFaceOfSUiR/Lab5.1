@@ -11,9 +11,10 @@ public class Message implements Serializable {
     private int port = 228;
     private LoginController login;
 
-    public Message(Command command, Status status){
+    public Message(Command command, Status status, int port){
         this.command = command;
         this.status = status;
+        this.port = port;
     }
 
     public int getPort() {return port;}

@@ -8,19 +8,22 @@ import java.util.concurrent.TimeUnit;
 
 
 public class Client {
-    public final static int SERVICE_PORT = 50001;
+    public static int SERVICE_PORT = 50001;
     DatagramSocket clientSocket;
     InetAddress IPAddress;
     DatagramPacket inputPacket;
     ByteArrayOutputStream bStream;
     DatagramSocket datagramSocket;
+    int selfPort;
+    private LoginController loginController;
     private byte[] receivingDataBuffer = new byte[65000];
     private byte[] sendingDataBuffer = new byte[65000];
 
-    public Client(){
+    public Client(int port){
         try {
-            datagramSocket = new DatagramSocket(228);
+            datagramSocket = new DatagramSocket(port);
             datagramSocket.setSoTimeout(5000);
+            selfPort = port;
         } catch (SocketException e) {
             //e.printStackTrace();
         }
@@ -29,11 +32,12 @@ public class Client {
     public void initialize(LoginController loginController) throws InterruptedException {
         try{
             loginController.login();
+            this.loginController = loginController;
             clientSocket = new DatagramSocket();
             IPAddress = InetAddress.getByName("localhost");
             bStream = new ByteArrayOutputStream();
             ObjectOutput oo = new ObjectOutputStream(bStream);
-            Message message = new Message(null, Status.NOT_ESTABLISHED);
+            Message message = new Message(null, Status.NOT_ESTABLISHED,selfPort);
             message.setLogin(loginController);
             oo.writeObject(message);
             oo.close();
@@ -62,7 +66,8 @@ public class Client {
     public void sendCommand(Command command){
         try {
             //System.out.println(command);
-            Message message = new Message(command, Status.ESTABLISHED);
+            Message message = new Message(command, Status.ESTABLISHED,selfPort);
+            message.setLogin(loginController);
             bStream.reset();
             ObjectOutput oo = new ObjectOutputStream(bStream);
             oo.writeObject(message);

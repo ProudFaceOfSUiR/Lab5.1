@@ -15,7 +15,10 @@ public class UpdateID extends Command{
     public void execute(Database database){
         try {
             if(argument == null) throw new NullPointerException();
-            if (database.getCollection().removeIf(p -> p.getId().equals(Long.parseLong(argument)))){
+            for (Person p:database.getCollection())
+                if(p.getId().equals(Long.parseLong(argument)) && p.getUserName().equals(database.getLogin()))
+                    database.getDatabaseManager().removeElementFromDatabase(p);
+            if (database.getCollection().removeIf(p -> (p.getId().equals(Long.parseLong(argument))) && (p.getUserName().equals(database.getLogin())) )){
                 person.setId(Long.parseLong(argument));
                 database.addNewElement(person);
             }

@@ -13,6 +13,19 @@ public class Database {
     private TreeSet<Person> collection;
     private ArrayList<String> historyLog;
     private DatabaseManager databaseManager;
+    private String login;
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public DatabaseManager getDatabaseManager() {
+        return databaseManager;
+    }
 
     public void initialize(DatabaseManager databaseManager){
         collection = new TreeSet<>();
@@ -54,7 +67,7 @@ public class Database {
      */
     public String getHistoryLog() {
         StringBuilder stringBuilder = new StringBuilder();
-        for(String str :historyLog){
+        for(String str : historyLog){
             stringBuilder.append(str);
             stringBuilder.append("\n");
         }

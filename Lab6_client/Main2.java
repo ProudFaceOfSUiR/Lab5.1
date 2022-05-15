@@ -7,10 +7,19 @@ import com.company.InputReader;
 import java.io.IOException;
 import java.net.SocketTimeoutException;
 import java.util.Scanner;
+import Commands.Command;
+        import Network.Client;
+        import Security.LoginController;
+        import com.company.Database;
+        import com.company.InputReader;
 
-public class Main{
+        import java.io.IOException;
+        import java.net.SocketTimeoutException;
+        import java.util.Scanner;
+
+public class Main2{
     public static void main(String args[]) throws IOException, InterruptedException {
-        Client client = new Client(228);
+        Client client = new Client(229);
 
         Database database = new Database();
         LoginController loginController = new LoginController();
@@ -19,6 +28,7 @@ public class Main{
         Scanner scanner = new Scanner(System.in);
         InputReader inputReader = new InputReader();
 
+        //loginController.login();
         client.initialize(loginController);
         while (true){
             try {

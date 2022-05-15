@@ -147,8 +147,16 @@ public class DatabaseManager {
         } catch (SQLException e){
             e.printStackTrace();
         }
+    }
 
-
+    public void removeElementFromDatabase(Person person){
+        try{
+            String sql = "DELETE FROM USERBASE WHERE ID = " + person.getId() + ";";
+            stmt.executeUpdate(sql);
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 
 
