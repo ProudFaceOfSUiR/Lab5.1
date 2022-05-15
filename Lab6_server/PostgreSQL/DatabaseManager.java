@@ -1,6 +1,7 @@
 package PostgreSQL;
 
 //STEP 1. Import required packages
+import Security.LoginController;
 import com.company.Database;
 import com.company.Person;
 import org.postgresql.util.PSQLException;
@@ -9,6 +10,7 @@ import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
+
 
 public class DatabaseManager {
     //  Database credentials
@@ -56,6 +58,61 @@ public class DatabaseManager {
             System.out.println("Database located");
         } catch (SQLException e){
             System.out.println("Unable to create database");
+        }
+    }
+
+    public void createNewPasswordBase(){
+        try {
+            Statement stmt = c.createStatement();
+            String sql = "CREATE TABLE PASSWORDBASE " +
+                    "(ID SERIAL PRIMARY KEY     NOT NULL, " +
+                    " USERNAME           TEXT    NOT NULL, " +
+                    " PASSWORD           TEXT    NOT NULL);";
+            stmt.executeUpdate(sql);
+        } catch (PSQLException e){
+            System.out.println("Database located");
+        } catch (SQLException e){
+            System.out.println("Unable to create database");
+        }
+    }
+
+    public boolean userExists(LoginController loginController){
+        boolean res = false;
+        try {
+            ResultSet rs = stmt.executeQuery("SELECT * FROM passwordbase");
+            while(rs.next()){
+                if(rs.getString("USERNAME").equals(loginController.getLogin())){
+                    res = true;
+                }
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return res;
+    }
+
+    public boolean passwordMatches(String password ,String login){
+        boolean res = false;
+        try{
+            ResultSet rs = stmt.executeQuery("SELECT PASSWORD FROM passwordbase WHERE USERNAME = '"+login+"';");
+            rs.next();
+            String result = rs.getString("PASSWORD");
+            System.out.println(result);
+            System.out.println(password);
+            if(password.equals(result))
+                res = true;
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return res;
+    }
+
+    public void addNewUser(LoginController loginController){
+        try{
+            String sql = "INSERT INTO PASSWORDBASE (USERNAME, PASSWORD) VALUES ('" + loginController.getLogin()+"', '" + loginController.getPassword()+ "'); ";
+            stmt.executeUpdate(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 

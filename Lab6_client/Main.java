@@ -11,14 +11,15 @@ import java.util.Scanner;
 public class Main{
     public static void main(String args[]) throws IOException, InterruptedException {
         Client client = new Client();
-        client.initialize();
+
         Database database = new Database();
         database.initialize();
         Command command;
         Scanner scanner = new Scanner(System.in);
         InputReader inputReader = new InputReader();
         LoginController loginController = new LoginController();
-        loginController.login();
+        //loginController.login();
+        client.initialize(loginController);
         while (true){
             try {
                 command = inputReader.read(scanner);
@@ -28,7 +29,8 @@ public class Main{
                 System.out.println(command.getAnswer());
             } catch (SocketTimeoutException | NullPointerException e){
                 System.out.println("Unable to connect to server");
-                client.initialize();
+                //e.printStackTrace();
+                client.initialize(loginController);
             }
         }
     }

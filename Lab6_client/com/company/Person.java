@@ -48,6 +48,10 @@ public class Person implements Comparable<Person>, Serializable {
         return height;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
     @Override
     public int compareTo(Person person) {
         if (id > person.id)

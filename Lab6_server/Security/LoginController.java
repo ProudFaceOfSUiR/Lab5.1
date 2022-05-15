@@ -12,6 +12,7 @@ public class LoginController implements Serializable {
     private String login;
     private String password;
     private boolean newUser;
+    private boolean approved = false;
 
     public void login(){
         System.out.println("Type 'sign up', if you are a new user and 'sign in', if you have an account");
@@ -29,7 +30,13 @@ public class LoginController implements Serializable {
 
     }
 
+    public String getLogin() {
+        return login;
+    }
 
+    public String getPassword() {
+        return password;
+    }
 
     public String get_SHA_512_SecurePassword(String passwordToHash, String salt){
         String generatedPassword = null;
@@ -46,5 +53,17 @@ public class LoginController implements Serializable {
             e.printStackTrace();
         }
         return generatedPassword;
+    }
+
+    public boolean isApproved(){
+        return approved;
+    }
+
+    public void setApproved(boolean approved){
+        this.approved = approved;
+    }
+
+    public boolean isNew(){
+        return newUser;
     }
 }

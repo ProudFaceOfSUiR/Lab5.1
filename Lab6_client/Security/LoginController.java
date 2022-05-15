@@ -12,22 +12,44 @@ public class LoginController implements Serializable {
     private String login;
     private String password;
     private boolean newUser;
+    private boolean approved = false;
 
     public void login(){
         System.out.println("Type 'sign up', if you are a new user and 'sign in', if you have an account");
         Scanner scanner = new Scanner(System.in);
         String line = scanner.nextLine();
-        if(line.toLowerCase(Locale.ROOT).equals("sign up"))
+        if(line.toLowerCase(Locale.ROOT).equals("sign up")) {
             newUser = true;
-        if(line.toLowerCase(Locale.ROOT).equals("sign in"))
-            newUser = false;
-        System.out.print("Enter your login: ");
-        login = scanner.nextLine();
-        System.out.print("Enter your password: ");
-        password = scanner.nextLine();
-        password = get_SHA_512_SecurePassword(password,"PeregudinTop666");
+            System.out.print("Enter your login: ");
+            login = scanner.nextLine();
+            System.out.print("Enter your password: ");
+            password = scanner.nextLine();
+            password = get_SHA_512_SecurePassword(password,"PeregudinTop666");
+        }
+        else {
+            if (line.toLowerCase(Locale.ROOT).equals("sign in")) {
+                newUser = false;
+                System.out.print("Enter your login: ");
+                login = scanner.nextLine();
+                System.out.print("Enter your password: ");
+                password = scanner.nextLine();
+                password = get_SHA_512_SecurePassword(password, "PeregudinTop666");
+            }
+            else{
+                login();
+            }
+        }
+
+
     }
 
+    public String getLogin() {
+        return login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 
     public String get_SHA_512_SecurePassword(String passwordToHash, String salt){
         String generatedPassword = null;
@@ -44,5 +66,17 @@ public class LoginController implements Serializable {
             e.printStackTrace();
         }
         return generatedPassword;
+    }
+
+    public boolean isNew(){
+        return newUser;
+    }
+
+    public void setApproved(boolean approved){
+        this.approved = approved;
+    }
+
+    public boolean isApproved(){
+        return approved;
     }
 }

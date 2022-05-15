@@ -12,5 +12,6 @@ public class Show extends Command{
     @Override
     public void execute(Database database){
         answer = database.toString();
+        System.out.println(answer);
     }
 }

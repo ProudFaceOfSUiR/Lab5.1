@@ -1,5 +1,6 @@
 package Network;
 import Commands.*;
+import Security.LoginController;
 
 import java.io.*;
 import java.net.*;
@@ -13,8 +14,8 @@ public class Client {
     DatagramPacket inputPacket;
     ByteArrayOutputStream bStream;
     DatagramSocket datagramSocket;
-    private byte[] receivingDataBuffer = new byte[4096];
-    private byte[] sendingDataBuffer = new byte[1024];
+    private byte[] receivingDataBuffer = new byte[65000];
+    private byte[] sendingDataBuffer = new byte[65000];
 
     public Client(){
         try {
@@ -25,28 +26,36 @@ public class Client {
         }
     }
 
-    public void initialize() throws InterruptedException {
+    public void initialize(LoginController loginController) throws InterruptedException {
         try{
+            loginController.login();
             clientSocket = new DatagramSocket();
             IPAddress = InetAddress.getByName("localhost");
             bStream = new ByteArrayOutputStream();
             ObjectOutput oo = new ObjectOutputStream(bStream);
             Message message = new Message(null, Status.NOT_ESTABLISHED);
+            message.setLogin(loginController);
             oo.writeObject(message);
             oo.close();
             byte[] serializedMessage = bStream.toByteArray();
             DatagramPacket sendingPacket = new DatagramPacket(serializedMessage, serializedMessage.length,IPAddress, SERVICE_PORT);
             clientSocket.send(sendingPacket);
-            if(recieveMessage().getStatus()==Status.ESTABLISHED){
+            message = recieveMessage();
+            if(message.getStatus()==Status.ESTABLISHED && message.getLogin().isApproved()){
                 System.out.println("Connection established, you can start entering commands");
             }
+            if (message.getStatus()==Status.NOT_ESTABLISHED && !message.getLogin().isApproved()) {
+                System.out.println("This login has already been taken");
+                initialize(loginController);
+            }
+
         }
         catch(IOException e) {
             //e.printStackTrace();
         } catch (NullPointerException e){
             System.out.println("Server is not responding, reconnecting in 5 sec");
             TimeUnit.SECONDS.sleep(5);
-            initialize();
+            initialize(loginController);
         }
 
     }

@@ -2,7 +2,6 @@ package Network;
 
 import Commands.Command;
 import Security.LoginController;
-import com.company.Person;
 
 import java.io.Serializable;
 
@@ -19,11 +18,19 @@ public class Message implements Serializable {
 
     public int getPort() {return port;}
 
+    public void setLogin(LoginController login) {
+        this.login = login;
+    }
+
     public Command getCommand() {
         return command;
     }
 
     public Status getStatus() {
         return status;
+    }
+
+    public LoginController getLogin() {
+        return login;
     }
 }

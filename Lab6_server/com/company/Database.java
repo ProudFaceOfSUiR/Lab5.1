@@ -1,6 +1,7 @@
 package com.company;
 
 import Commands.Command;
+import PostgreSQL.DatabaseManager;
 
 import java.util.ArrayList;
 import java.util.TreeSet;
@@ -11,10 +12,12 @@ import java.util.TreeSet;
 public class Database {
     private TreeSet<Person> collection;
     private ArrayList<String> historyLog;
+    private DatabaseManager databaseManager;
 
-    public void initialize(){
+    public void initialize(DatabaseManager databaseManager){
         collection = new TreeSet<>();
         historyLog = new ArrayList<>();
+        this.databaseManager = databaseManager;
     }
 
     public TreeSet<Person> getCollection() {
@@ -26,6 +29,7 @@ public class Database {
      */
     public void addNewElement(Person person){
         collection.add(person);
+        databaseManager.addElementToDatabase(person);
     }
 
     /**
@@ -40,7 +44,7 @@ public class Database {
      */
     public void updateHistoryLog(Command command){
         if (collection.size()>14)
-            collection.remove(0);
+            collection.pollFirst();
         if(!command.getClass().getName().equals("Commands.Error"))
         historyLog.add(command.getClass().getName().replace("Commands.",""));
     }
