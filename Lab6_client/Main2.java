@@ -7,15 +7,6 @@ import com.company.InputReader;
 import java.io.IOException;
 import java.net.SocketTimeoutException;
 import java.util.Scanner;
-import Commands.Command;
-        import Network.Client;
-        import Security.LoginController;
-        import com.company.Database;
-        import com.company.InputReader;
-
-        import java.io.IOException;
-        import java.net.SocketTimeoutException;
-        import java.util.Scanner;
 
 public class Main2{
     public static void main(String args[]) throws IOException, InterruptedException {
@@ -27,8 +18,6 @@ public class Main2{
         Command command;
         Scanner scanner = new Scanner(System.in);
         InputReader inputReader = new InputReader();
-
-        //loginController.login();
         client.initialize(loginController);
         while (true){
             try {

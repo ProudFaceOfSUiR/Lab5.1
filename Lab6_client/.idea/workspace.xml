@@ -4,28 +4,12 @@
     <list default="true" id="f2497d8f-33a5-4968-9a2f-35eb3e7b6c45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Network/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Network/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/company/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/company/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Network/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Network/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Network/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Network/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Clear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/RemoveByID.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/RemoveByID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/RemoveGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/RemoveGreater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/RemoveLower.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/RemoveLower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/UpdateID.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/UpdateID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Network/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Network/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/Commands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Commands/Show.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/Multithreadder/Multithreadder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Multithreadder/Multithreadder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab6_server/Network/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Network/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab6_server/PostgreSQL/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/PostgreSQL/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/com/company/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/com/company/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Network/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/PostgreSQL/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/PostgreSQL/DatabaseManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/com/company/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6_server/Security/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Security/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +98,8 @@
       <workItem from="1652447247283" duration="2172000" />
       <workItem from="1652472768304" duration="4005000" />
       <workItem from="1652529974127" duration="4137000" />
-      <workItem from="1652649426314" duration="5207000" />
+      <workItem from="1652649426314" duration="5615000" />
+      <workItem from="1652714718885" duration="3898000" />
     </task>
     <servers />
   </component>

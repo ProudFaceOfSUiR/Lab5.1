@@ -7,6 +7,8 @@ import com.company.InputReader;
 import java.io.IOException;
 import java.net.SocketTimeoutException;
 import java.util.Scanner;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Main{
     public static void main(String args[]) throws IOException, InterruptedException {
@@ -29,7 +31,6 @@ public class Main{
                 System.out.println(command.getAnswer());
             } catch (SocketTimeoutException | NullPointerException e){
                 System.out.println("Unable to connect to server");
-                //e.printStackTrace();
                 client.initialize(loginController);
             }
         }

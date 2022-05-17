@@ -14,6 +14,7 @@ public class LoginController implements Serializable {
     private boolean newUser;
     private boolean approved = false;
 
+
     public void login(){
         System.out.println("Type 'sign up', if you are a new user and 'sign in', if you have an account");
         Scanner scanner = new Scanner(System.in);

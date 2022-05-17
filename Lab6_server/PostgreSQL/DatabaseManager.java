@@ -97,8 +97,8 @@ public class DatabaseManager {
             ResultSet rs = stmt.executeQuery("SELECT PASSWORD FROM passwordbase WHERE USERNAME = '"+login+"';");
             rs.next();
             String result = rs.getString("PASSWORD");
-            System.out.println(result);
-            System.out.println(password);
+            //System.out.println(result);
+            //System.out.println(password);
             if(password.equals(result))
                 res = true;
         } catch (SQLException e){
@@ -127,7 +127,7 @@ public class DatabaseManager {
                     rs.getInt("height"), Person.Color.valueOf(rs.getString("eyecolor").toUpperCase(Locale.ROOT)), Person.Color.valueOf(rs.getString("haircolor").toUpperCase(Locale.ROOT)),
                     Person.Country.valueOf(rs.getString("nationality").toUpperCase(Locale.ROOT)), rs.getLong("locationx"),
                     rs.getFloat("locationy"), rs.getFloat("locationz"));
-            System.out.println(person);
+            //System.out.println(person);
             database.getCollection().add(person);
         }
         } catch (SQLException | ParseException e){
@@ -160,55 +160,4 @@ public class DatabaseManager {
     }
 
 
-    public static void execute(){
-
-        Connection c = null;
-        Statement stmt = null;
-        try {
-            Class.forName("org.postgresql.Driver");
-            c = DriverManager
-                    .getConnection("jdbc:postgresql://localhost:5432/postgres",
-                            "postgres", "123");
-            System.out.println("Opened database successfully");
-            /*
-            stmt = c.createStatement();
-            String sql = "CREATE TABLE USERBASE " +
-                    "(ID SERIAL PRIMARY KEY     NOT NULL, " +
-                    " USER1           TEXT    NOT NULL, " +
-                    " NAME1          TEXT    NOT NULL, " +
-                    " COORDINATEX    INT     NOT NULL, " +
-                    " COORDINATEY    FLOAT   NOT NULL, " +
-                    " CREATIONDATE   TEXT    NOT NULL, " +
-                    " HEIGHT         TEXT    NOT NULL, " +
-                    " EYECOLOR       TEXT    NOT NULL, " +
-                    " HAIRCOLOR      TEXT    NOT NULL, " +
-                    " NATIONALITY    TEXT    NOT NULL, " +
-                    " LOCATIONX      TEXT    NOT NULL, " +
-                    " LOCATIONY      FLOAT   NOT NULL, " +
-                    " LOCATIONZ      FLOAT   NOT NULL)";
-
-            stmt.executeUpdate(sql);
-            stmt.close();
-            */
-
-            stmt = c.createStatement();
-            String sql = "INSERT INTO USERBASE (USER1, NAME1, COORDINATEX,COORDINATEY, CREATIONDATE, HEIGHT, " +
-                    "EYECOLOR, HAIRCOLOR, NATIONALITY, LOCATIONX ,LOCATIONY, LOCATIONZ ) "
-                    + "VALUES ('Paul', 'name2', 1,3,'05.03.2003', 66, 'red', 'red', 'usa', 32, 20000.00, 2202 );";
-            //sql = "ALTER TABLE userbase ADD COLUMN id SERIAL;";
-            sql = "SELECT * FROM userbase;";
-            ResultSet rs = stmt.executeQuery("SELECT * FROM userbase");
-            while (rs.next()){
-                System.out.println(rs.getString("user1"));
-                //System.out.println(rs.getString("user1"));
-            }
-
-            //ResultSet rs = stmt.executeUpdate(sql);
-            c.close();
-        } catch ( Exception e ) {
-            System.err.println( e.getClass().getName()+": "+ e.getMessage() );
-            System.exit(0);
-        }
-        System.out.println("Table created successfully");
-    }
 }

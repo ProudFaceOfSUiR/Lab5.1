@@ -42,7 +42,7 @@ public class Server {
             port = message.getPort();
             iStream.close();
             this.message = message;
-            System.out.println(this.message.getCommand() + "in resieve mes");
+            //System.out.println(this.message.getCommand() + "in resieve mes");
             return message;
         } catch (IOException e) {
             e.printStackTrace();
@@ -63,7 +63,7 @@ public class Server {
         oo.writeObject(message);
         oo.close();
         byte[] serializedMessage = bStream.toByteArray();
-            System.out.println(port);
+            //System.out.println(port);
         DatagramPacket sendingPacket = new DatagramPacket(serializedMessage, serializedMessage.length, IPAddress, port);
         clientSocket.send(sendingPacket);
     }
@@ -76,7 +76,7 @@ public class Server {
         oo.writeObject(message);
         oo.close();
         byte[] serializedMessage = bStream.toByteArray();
-            System.out.println(port);
+            //System.out.println(port);
         DatagramPacket sendingPacket = new DatagramPacket(serializedMessage, serializedMessage.length, IPAddress, port);
         clientSocket.send(sendingPacket);
     }

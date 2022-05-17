@@ -9,6 +9,8 @@ import com.company.Database;
 import java.io.IOException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Multithreadder extends RecursiveTask {
     @Override
@@ -27,12 +29,22 @@ public class Multithreadder extends RecursiveTask {
 
         while (true) {
             server.message = server.recieveMessage();
-            System.out.println(server.message.getLogin().getLogin());
+            //System.out.println(server.message.getLogin().getLogin());
             if (server.message.getStatus() == Status.ESTABLISHED) {
-                ForkJoinPool forkJoinPool = new ForkJoinPool();
-                System.out.println(server.message.getCommand());
+                //System.out.println(server.message.getCommand());
                 try {
                     Database.setLogin(server.message.getLogin().getLogin());
+                    Lock l = new ReentrantLock();
+                    try {//блокировка
+                        l.lockInterruptibly();
+                        try {
+                            server.message.getCommand().execute(Database);
+                        } finally {
+                            l.unlock();
+                        }
+                    } catch (InterruptedException e) {
+                        System.err.println("Interrupted wait");
+                    }
                     server.message.getCommand().execute(Database);
                     server.sendCommand(server.message.getCommand());
                 } catch (IOException e) {
@@ -41,11 +53,10 @@ public class Multithreadder extends RecursiveTask {
                 Database.updateHistoryLog(server.message.getCommand());
             }
             if (server.message.getStatus() == Status.NOT_ESTABLISHED) {
-
                 LoginController loginController = server.message.getLogin();
                 boolean userExists = databaseManager.userExists(loginController);
                 if (!userExists && loginController.isNew()) {
-                    System.out.println("case 1");
+                    //System.out.println("case 1");
                     databaseManager.addNewUser(loginController);
                     Message reply = new Message(null, Status.ESTABLISHED, server.message.getPort());
                     reply.setLogin(loginController);
@@ -57,7 +68,7 @@ public class Multithreadder extends RecursiveTask {
                     }
                 }
                 if (userExists && loginController.isNew()) {
-                    System.out.println("case 2");
+                    //System.out.println("case 2");
                     Message reply = new Message(null, Status.NOT_ESTABLISHED,server.message.getPort());
                     reply.setLogin(loginController);
                     reply.getLogin().setApproved(false);
@@ -68,7 +79,7 @@ public class Multithreadder extends RecursiveTask {
                     }
                 }
                 if (userExists && !loginController.isNew()) {
-                    System.out.println("case 3");
+                    //System.out.println("case 3");
                     if (databaseManager.passwordMatches(loginController.getPassword(), loginController.getLogin())) {
                         Message reply = new Message(null, Status.ESTABLISHED,server.message.getPort());
                         reply.setLogin(loginController);
@@ -79,6 +90,7 @@ public class Multithreadder extends RecursiveTask {
                             e.printStackTrace();
                         }
                     } else {
+                        //System.out.println("case 6");
                         Message reply = new Message(null, Status.NOT_ESTABLISHED,server.message.getPort());
                         reply.setLogin(loginController);
                         reply.getLogin().setApproved(false);
@@ -90,7 +102,7 @@ public class Multithreadder extends RecursiveTask {
                     }
                 }
                 if (userExists && loginController.isNew()) {
-                    System.out.println("case 4");
+                    //System.out.println("case 4");
                     Message reply = new Message(null, Status.NOT_ESTABLISHED,server.message.getPort());
                     reply.setLogin(loginController);
                     reply.getLogin().setApproved(false);
