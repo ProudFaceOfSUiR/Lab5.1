@@ -16,7 +16,7 @@ public class DatabaseManager {
     //  Database credentials
     static final String DB_URL = "/jdbc:postgresql://localhost:5432/postgres";
     static final String USER = "postgres";
-    static final String PASS = "123";
+    static final String PASS = "admin";
     Connection c = null;
     Statement stmt;
     private boolean connectionEstablished = false;
@@ -25,7 +25,7 @@ public class DatabaseManager {
         try {
             c = DriverManager
                     .getConnection("jdbc:postgresql://localhost:5432/postgres",
-                            "postgres", "123");
+                            "postgres", "admin");
             connectionEstablished = true;
             stmt = c.createStatement();
         } catch (SQLException e){

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Graphics.App">
+   <children>
+      <Button fx:id="SignIn" layoutX="192.0" layoutY="250.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Sign in" onAction="#clickIn"/>
+      <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" layoutX="200.0" layoutY="64.0" />
+      <TextField fx:id="Log" layoutX="200.0" layoutY="84.0" prefHeight="29.0" prefWidth="200.0" GridPane.rowIndex="1"/>
+      <Label  text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" layoutX="200.0" layoutY="141.0" />
+      <TextField fx:id="Pass" layoutX="200.0" layoutY="161.0" prefHeight="26.0" prefWidth="200.0" GridPane.rowIndex="1"/>
+      <Button fx:id="SignUp" layoutX="322.0" layoutY="250.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Sign up" onAction="#clickUp"/>
+   </children>
+</Pane>

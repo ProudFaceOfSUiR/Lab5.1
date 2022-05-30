@@ -7,7 +7,6 @@ import Security.LoginController;
 import com.company.Database;
 
 import java.io.IOException;
-import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
 public class Multithreadder extends RecursiveTask {
@@ -24,12 +23,10 @@ public class Multithreadder extends RecursiveTask {
         Database.getCollection().clear();
         databaseManager.readCollectionFromDatabase(Database);
 
-
         while (true) {
             server.message = server.recieveMessage();
             System.out.println(server.message.getLogin().getLogin());
             if (server.message.getStatus() == Status.ESTABLISHED) {
-                ForkJoinPool forkJoinPool = new ForkJoinPool();
                 System.out.println(server.message.getCommand());
                 try {
                     Database.setLogin(server.message.getLogin().getLogin());
@@ -41,7 +38,6 @@ public class Multithreadder extends RecursiveTask {
                 Database.updateHistoryLog(server.message.getCommand());
             }
             if (server.message.getStatus() == Status.NOT_ESTABLISHED) {
-
                 LoginController loginController = server.message.getLogin();
                 boolean userExists = databaseManager.userExists(loginController);
                 if (!userExists && loginController.isNew()) {
