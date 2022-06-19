@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Graphics.App">
    <children>
-      <Button fx:id="SignIn" layoutX="192.0" layoutY="250.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Sign in" onAction="#clickIn"/>
-      <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" layoutX="200.0" layoutY="64.0" />
-      <TextField fx:id="Log" layoutX="200.0" layoutY="84.0" prefHeight="29.0" prefWidth="200.0" GridPane.rowIndex="1"/>
-      <Label  text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" layoutX="200.0" layoutY="141.0" />
-      <TextField fx:id="Pass" layoutX="200.0" layoutY="161.0" prefHeight="26.0" prefWidth="200.0" GridPane.rowIndex="1"/>
-      <Button fx:id="SignUp" layoutX="322.0" layoutY="250.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Sign up" onAction="#clickUp"/>
+      <Label fx:id="message" layoutX="203.0" layoutY="43.0" prefHeight="17.0" prefWidth="200.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+      <Button fx:id="SignIn" layoutX="192.0" layoutY="250.0" mnemonicParsing="false" onAction="#clickIn" prefHeight="25.0" prefWidth="78.0" text="Sign in" />
+      <Label fx:id="name" layoutX="200.0" layoutY="64.0" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+      <TextField fx:id="Log" layoutX="200.0" layoutY="84.0" prefHeight="29.0" prefWidth="200.0" GridPane.rowIndex="1" />
+      <Label fx:id="password" layoutX="200.0" layoutY="141.0" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+      <TextField fx:id="Pass" layoutX="200.0" layoutY="161.0" prefHeight="26.0" prefWidth="200.0" GridPane.rowIndex="1" />
+      <Button fx:id="SignUp" layoutX="322.0" layoutY="250.0" mnemonicParsing="false" onAction="#clickUp" prefHeight="25.0" prefWidth="78.0" text="Sign up" />
+      <ChoiceBox fx:id="localization" layoutX="181.0" layoutY="307.0" onAction="#language" prefWidth="150.0" value="English (Ind)">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Русский" />
+               <String fx:value="Suomalainen" />
+               <String fx:value="Hrvatski" />
+               <String fx:value="English (Ind)" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
    </children>
 </Pane>

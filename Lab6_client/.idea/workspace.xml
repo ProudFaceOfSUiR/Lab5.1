@@ -3,17 +3,32 @@
   <component name="ChangeListManager">
     <list default="true" id="f2497d8f-33a5-4968-9a2f-35eb3e7b6c45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graphics/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics/DatabaseWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graphics/DatabaseWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graphics/Language.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics/LoginScr.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Graphics/LoginScr.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics/LoginViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics/addNew.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Graphics/addNew.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics/mainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Graphics/mainScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Localisation/Languages.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Network/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Network/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Security/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Security/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Lab6_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Lab6_server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/Multithreadder/Multithreadder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/Multithreadder/Multithreadder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/PostgreSQL/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/PostgreSQL/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/RemoveByID.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/RemoveByID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/RemoveGreater.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/RemoveGreater.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/RemoveLower.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/RemoveLower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/UpdateID.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Commands/UpdateID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Lab6_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Lab6_server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Multithreadder/Multithreadder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/Multithreadder/Multithreadder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/PostgreSQL/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6_server/out/production/Lab6_server/PostgreSQL/DatabaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/DatabaseWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/DatabaseWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/Language$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/Language.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/Language.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/LoginScr.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/LoginScr.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/LoginViewController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/addNew.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/addNew.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/mainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Graphics/mainScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Localisation/Languages.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Network/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Network/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Network/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Network/Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6_client/Security/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6_client/Security/LoginController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +40,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -40,16 +56,15 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Graphics/App.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Graphics/DatabaseViewController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Graphics/AddWindow.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Graphics/AddViewController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Graphics/LoginViewController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Graphics/App.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Graphics/DatabaseWindow.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/com/company/Person.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Graphics/DatabaseViewController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Graphics/LoginScr.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Graphics/mainScreen.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Graphics/addNew.fxml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Graphics/DatabaseWindow.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Graphics/LoginScr.fxml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -66,7 +81,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Lab5.1-7th_lab/Lab5.1-7th_lab/Lab6_client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -79,7 +94,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Graphics.App" />
       <module name="Lab6_client" />
@@ -113,6 +128,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Graphics.Demo" />
+      <module name="Lab6_client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Graphics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main2" />
       <module name="Lab6_client" />
@@ -122,8 +150,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
         <item itemvalue="Application.DatabaseWindow" />
+        <item itemvalue="Application.Demo" />
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.Main2" />
       </list>
     </recent_temporary>
@@ -145,6 +174,13 @@
       <workItem from="1652472768304" duration="4005000" />
       <workItem from="1652529974127" duration="4137000" />
       <workItem from="1652649426314" duration="5207000" />
+      <workItem from="1653948995663" duration="306000" />
+      <workItem from="1654005047696" duration="5000" />
+      <workItem from="1654184160078" duration="3338000" />
+      <workItem from="1654503135918" duration="17136000" />
+      <workItem from="1654945057752" duration="537000" />
+      <workItem from="1655559819846" duration="897000" />
+      <workItem from="1655561095877" duration="941000" />
     </task>
     <servers />
   </component>

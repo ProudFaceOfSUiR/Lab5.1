@@ -2,6 +2,8 @@ package Graphics;
 
 import com.company.Person;
 import javafx.application.Application;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,31 +20,38 @@ import javafx.stage.Stage;
 import static javafx.application.Application.launch;
 
 public class DatabaseWindow extends Application {
+
     Stage stage=new Stage();
 
     private ObservableList<User> usersData = FXCollections.observableArrayList();
     private ObservableList<Person> personsData = FXCollections.observableArrayList();
-
     @FXML
     private TableView<Person> tableUsers;
-
     @FXML
     private TableColumn<Person, Long> idColumn;
+    public TableColumn<Person, String> nameColumn;
+    public TableColumn<Person, String> usernameColumn;
+    public TableColumn<Person, String> coordXColumn;
+    public TableColumn<Person, String> coordYColumn;
+    public TableColumn<Person, String> dateColumn;
+    public TableColumn<Person, String> heightColumn;
+    public TableColumn<Person, String> eyeColumn;
+    public TableColumn<Person, String> hairColumn;
 
-    @FXML
-    private TableColumn<Person, String> loginColumn;
 
-    @FXML
-    private TableColumn<Person, String> passwordColumn;
-
-    // инициализируем форму данными
-    @FXML
     private void initialize() {
+        System.out.println("bla");
         initData();
         // устанавливаем тип и значение которое должно хранится в колонке
-        idColumn.setCellValueFactory(new PropertyValueFactory<Person, Long>("id"));
-        loginColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("name"));
-        passwordColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("userName"));
+
+
+        idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        usernameColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("userName"));
+        coordYColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("coordinates.getX"));
+        coordYColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("coordinates.getY"));
+        //dateColumn.setCellValueFactory(new PropertyValueFactory<Person, String>());
+
         // заполняем таблицу данными
         tableUsers.setItems(personsData);
     }
@@ -72,10 +81,13 @@ public class DatabaseWindow extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
         Parent root = FXMLLoader.load(getClass().getResource("mainScreen.fxml"));
+        initialize();
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
+
     }
     public void  showWindow() throws Exception {
         start(stage);

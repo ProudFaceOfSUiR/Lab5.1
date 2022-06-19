@@ -13,6 +13,7 @@ public class LoginController implements Serializable {
     private String password;
     private boolean newUser;
     private boolean approved = false;
+    private String messageToGraphics;
 
     public void login(){
         System.out.println("Type 'sign up', if you are a new user and 'sign in', if you have an account");
@@ -34,13 +35,16 @@ public class LoginController implements Serializable {
                 System.out.print("Enter your password: ");
                 password = scanner.nextLine();
                 password = get_SHA_512_SecurePassword(password, "PeregudinTop666");
-            }
-            else{
+            } else {
                 login();
             }
         }
+    }
 
-
+    public void graphicLogin(String login, String password, boolean newUser){
+        this.login = login;
+        this.password = get_SHA_512_SecurePassword(password, "PeregudinTop666");
+        this.newUser = newUser;
     }
 
     public String getLogin() {
@@ -78,5 +82,13 @@ public class LoginController implements Serializable {
 
     public boolean isApproved(){
         return approved;
+    }
+
+    public void setMessageToGraphics(String messageToGraphics) {
+        this.messageToGraphics = messageToGraphics;
+    }
+
+    public String getMessageToGraphics() {
+        return messageToGraphics;
     }
 }

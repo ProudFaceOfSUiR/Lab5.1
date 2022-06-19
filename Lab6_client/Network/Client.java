@@ -61,8 +61,45 @@ public class Client {
             TimeUnit.SECONDS.sleep(5);
             initialize(loginController);
         }
-
     }
+
+    public Status graphicInitialize(LoginController loginController) {
+        Status status = Status.NOT_ESTABLISHED;
+        try{
+            this.loginController = loginController;
+            clientSocket = new DatagramSocket();
+            IPAddress = InetAddress.getByName("localhost");
+            bStream = new ByteArrayOutputStream();
+            ObjectOutput oo = new ObjectOutputStream(bStream);
+            Message message = new Message(null, Status.NOT_ESTABLISHED,selfPort);
+            message.setLogin(loginController);
+            oo.writeObject(message);
+            oo.close();
+            byte[] serializedMessage = bStream.toByteArray();
+            DatagramPacket sendingPacket = new DatagramPacket(serializedMessage, serializedMessage.length,IPAddress, SERVICE_PORT);
+            clientSocket.send(sendingPacket);
+            message = recieveMessage();
+            System.out.println(message);
+            if(message.getStatus()==Status.ESTABLISHED && message.getLogin().isApproved()){
+                status = Status.ESTABLISHED;
+                //loginController.setMessageToGraphics("Connection established, you can start entering commands");
+            }
+            if (message.getStatus()==Status.NOT_ESTABLISHED && !message.getLogin().isApproved() && loginController.isNew()) {
+                status = Status.TAKEN_LOGIN;
+            }
+            if (message.getStatus()==Status.NOT_ESTABLISHED && !message.getLogin().isApproved() && !loginController.isNew()) {
+                status = Status.WRONG_PASSWORD;
+            }
+        }
+        catch(IOException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e){
+            e.printStackTrace();
+            loginController.setMessageToGraphics("Server is not responding, reconnecting in 5 sec");
+        }
+        return status;
+    }
+
     public void sendCommand(Command command){
         try {
             //System.out.println(command);

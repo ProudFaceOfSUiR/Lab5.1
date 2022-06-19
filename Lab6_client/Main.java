@@ -1,4 +1,5 @@
 import Commands.Command;
+import Graphics.App;
 import Network.Client;
 import Security.LoginController;
 import com.company.Database;
@@ -19,7 +20,13 @@ public class Main{
         Scanner scanner = new Scanner(System.in);
         InputReader inputReader = new InputReader();
 
+        //App app = new App("bla");
+        App.initApp(loginController,client);
+        App.main(args);
+        /*
         client.initialize(loginController);
+
+
         while (true){
             try {
                 command = inputReader.read(scanner);
@@ -32,7 +39,7 @@ public class Main{
                 //e.printStackTrace();
                 client.initialize(loginController);
             }
-        }
+        }*/
     }
 }
 
